@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
+    <!-- Ícone padrão -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo.png" />
+
+    <!-- Versão .ico (fallback para navegadores antigos) -->
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
+
+    <!-- Para Apple (iOS) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo.png" />
+
+    <!-- Para Android (manifesto PWA) -->
+    <link rel="manifest" href="../assets/logo.png" />
+
     <meta charset="utf-8" />
     <title>Palavras Proibidas • Mazinho Bot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       /* Aviso e tabela */
       .wrap {
@@ -118,8 +136,8 @@
         margin-top: 18px;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
       <div class="container">
         <h1><i class="fas fa-robot"></i> Bot Mazinho</h1>
@@ -133,584 +151,605 @@
     </header>
 
     <section class="hero">
-        <div class="container">
-            <!-- Alterando para usar emoji no título como na página inicial -->
-            <h2>🚫 Palavras Proibidas</h2>
-            <p>Lista pública de termos bloqueados pelo bot para manter um ambiente saudável na comunidade.</p>
-        </div>
+      <div class="container">
+        <!-- Alterando para usar emoji no título como na página inicial -->
+        <h2>🚫 Palavras Proibidas</h2>
+        <p>
+          Lista pública de termos bloqueados pelo bot para manter um ambiente
+          saudável na comunidade.
+        </p>
+      </div>
     </section>
 
     <main class="main-content">
-        <div class="container">
-            <section class="content-section">
-                <div class="warning-card">
-                    <div class="warning-header">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <h3>Conteúdo Sensível</h3>
-                    </div>
-                    <p>A lista abaixo contém xingamentos, ódio e incitação à violência com fins de <strong>transparência</strong> das regras do chat.</p>
-                    <div class="legend">
-                        <span class="badge lvl1"><i class="fas fa-circle"></i> Nível 1: Leve</span>
-                        <span class="badge lvl2"><i class="fas fa-circle"></i> Nível 2: Grave</span>
-                        <span class="badge lvl3"><i class="fas fa-circle"></i> Nível 3: Crítica</span>
-                    </div>
-                </div>
+      <div class="container">
+        <section class="content-section">
+          <div class="warning-card">
+            <div class="warning-header">
+              <i class="fas fa-exclamation-triangle"></i>
+              <h3>Conteúdo Sensível</h3>
+            </div>
+            <p>
+              A lista abaixo contém xingamentos, ódio e incitação à violência
+              com fins de <strong>transparência</strong> das regras do chat.
+            </p>
+            <div class="legend">
+              <span class="badge lvl1"
+                ><i class="fas fa-circle"></i> Nível 1: Leve</span
+              >
+              <span class="badge lvl2"
+                ><i class="fas fa-circle"></i> Nível 2: Grave</span
+              >
+              <span class="badge lvl3"
+                ><i class="fas fa-circle"></i> Nível 3: Crítica</span
+              >
+            </div>
+          </div>
 
-                <!-- NAZISMO -->
-                <div class="section">NAZISMO</div>
-                <table class="list">
-                    <thead>
-                        <tr>
-                            <th style="width: 160px">Categoria</th>
-                            <th style="width: 110px">Nível</th>
-                            <th>Termo/Frase</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="cat">NAZISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>nazismo</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">NAZISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>nazista</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">NAZISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>neo nazi</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">NAZISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>neonazista</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">NAZISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>sieg heil</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">NAZISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>heil hitler</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">NAZISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>hitler</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">NAZISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>ku klux klan</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">NAZISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>white power</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">NAZISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>supremacia branca</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">NAZISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>suastica</code>, <code>swastika</code></td>
-                        </tr>
-                    </tbody>
-                </table>
+          <!-- NAZISMO -->
+          <div class="section">NAZISMO</div>
+          <table class="list">
+            <thead>
+              <tr>
+                <th style="width: 160px">Categoria</th>
+                <th style="width: 110px">Nível</th>
+                <th>Termo/Frase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">NAZISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>nazismo</code></td>
+              </tr>
+              <tr>
+                <td class="cat">NAZISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>nazista</code></td>
+              </tr>
+              <tr>
+                <td class="cat">NAZISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>neo nazi</code></td>
+              </tr>
+              <tr>
+                <td class="cat">NAZISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>neonazista</code></td>
+              </tr>
+              <tr>
+                <td class="cat">NAZISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>sieg heil</code></td>
+              </tr>
+              <tr>
+                <td class="cat">NAZISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>heil hitler</code></td>
+              </tr>
+              <tr>
+                <td class="cat">NAZISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>hitler</code></td>
+              </tr>
+              <tr>
+                <td class="cat">NAZISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>ku klux klan</code></td>
+              </tr>
+              <tr>
+                <td class="cat">NAZISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>white power</code></td>
+              </tr>
+              <tr>
+                <td class="cat">NAZISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>supremacia branca</code></td>
+              </tr>
+              <tr>
+                <td class="cat">NAZISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term">
+                  <code>suastica</code>, <code>swastika</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <!-- RACISMO -->
-                <div class="section">RACISMO</div>
-                <table class="list">
-                    <thead>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Nível</th>
-                            <th>Termo/Frase</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="cat">RACISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term">
-                                <code>volta pra senzala</code>, <code>voltar pra senzala</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">RACISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term">
-                                <code>preto imundo</code>, <code>negro imundo</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">RACISMO</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term"><code>crioulo</code>, <code>pretume</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">RACISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>preto tem que morrer</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">RACISMO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term">
-                                <code>negro nao e gente</code>, <code>negro não é gente</code>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <!-- RACISMO -->
+          <div class="section">RACISMO</div>
+          <table class="list">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Nível</th>
+                <th>Termo/Frase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">RACISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term">
+                  <code>volta pra senzala</code>,
+                  <code>voltar pra senzala</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">RACISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term">
+                  <code>preto imundo</code>, <code>negro imundo</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">RACISMO</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term"><code>crioulo</code>, <code>pretume</code></td>
+              </tr>
+              <tr>
+                <td class="cat">RACISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>preto tem que morrer</code></td>
+              </tr>
+              <tr>
+                <td class="cat">RACISMO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term">
+                  <code>negro nao e gente</code>, <code>negro não é gente</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <!-- XENOFOBIA -->
-                <div class="section">XENOFOBIA</div>
-                <table class="list">
-                    <thead>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Nível</th>
-                            <th>Termo/Frase</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="cat">XENOFOBIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>imigrante imundo</code>, <code>estrangeiro de quinta</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">XENOFOBIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term"><code>volta pro seu pais</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">XENOFOBIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term"><code>latino imundo</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">XENOFOBIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term"><code>nordestino preguiçoso</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">XENOFOBIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>paraiba de m</code>, <code>paraíba de m</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">XENOFOBIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>indio preguiçoso</code>, <code>índio preguiçoso</code>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <!-- XENOFOBIA -->
+          <div class="section">XENOFOBIA</div>
+          <table class="list">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Nível</th>
+                <th>Termo/Frase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">XENOFOBIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>imigrante imundo</code>,
+                  <code>estrangeiro de quinta</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">XENOFOBIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term"><code>volta pro seu pais</code></td>
+              </tr>
+              <tr>
+                <td class="cat">XENOFOBIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term"><code>latino imundo</code></td>
+              </tr>
+              <tr>
+                <td class="cat">XENOFOBIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term"><code>nordestino preguiçoso</code></td>
+              </tr>
+              <tr>
+                <td class="cat">XENOFOBIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>paraiba de m</code>, <code>paraíba de m</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">XENOFOBIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>indio preguiçoso</code>, <code>índio preguiçoso</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <!-- LGBTFOBIA -->
-                <div class="section">LGBTFOBIA</div>
-                <table class="list">
-                    <thead>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Nível</th>
-                            <th>Termo/Frase</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="cat">LGBTFOBIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>viado</code>, <code>viadinho</code>, <code>boiola</code>,
-                                <code>bicha</code>, <code>bixona</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">LGBTFOBIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term"><code>sapatona</code>, <code>sapatão</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">LGBTFOBIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>traveco</code>, <code>travecao</code>,
-                                <code>travecão</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">LGBTFOBIA</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>transaids</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">LGBTFOBIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term"><code>viadagem tem cura</code></td>
-                        </tr>
-                    </tbody>
-                </table>
+          <!-- LGBTFOBIA -->
+          <div class="section">LGBTFOBIA</div>
+          <table class="list">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Nível</th>
+                <th>Termo/Frase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">LGBTFOBIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>viado</code>, <code>viadinho</code>,
+                  <code>boiola</code>, <code>bicha</code>, <code>bixona</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">LGBTFOBIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>sapatona</code>, <code>sapatão</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">LGBTFOBIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>traveco</code>, <code>travecao</code>,
+                  <code>travecão</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">LGBTFOBIA</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>transaids</code></td>
+              </tr>
+              <tr>
+                <td class="cat">LGBTFOBIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term"><code>viadagem tem cura</code></td>
+              </tr>
+            </tbody>
+          </table>
 
-                <!-- MISOGINIA -->
-                <div class="section">MISOGINIA</div>
-                <table class="list">
-                    <thead>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Nível</th>
-                            <th>Termo/Frase</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="cat">MISOGINIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>vadia</code>, <code>vagabunda</code>, <code>piranha</code>,
-                                <code>puta</code>, <code>putinha</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">MISOGINIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term"><code>feminazi</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">MISOGINIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>mulher tem que calar a boca</code>,
-                                <code>lugar de mulher na cozinha</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">MISOGINIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>mulher nao presta</code>, <code>mulher não presta</code>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <!-- MISOGINIA -->
+          <div class="section">MISOGINIA</div>
+          <table class="list">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Nível</th>
+                <th>Termo/Frase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">MISOGINIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>vadia</code>, <code>vagabunda</code>,
+                  <code>piranha</code>, <code>puta</code>, <code>putinha</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">MISOGINIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term"><code>feminazi</code></td>
+              </tr>
+              <tr>
+                <td class="cat">MISOGINIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>mulher tem que calar a boca</code>,
+                  <code>lugar de mulher na cozinha</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">MISOGINIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>mulher nao presta</code>, <code>mulher não presta</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <!-- CAPACITISMO -->
-                <div class="section">CAPACITISMO</div>
-                <table class="list">
-                    <thead>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Nível</th>
-                            <th>Termo/Frase</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="cat">CAPACITISMO</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>retardado</code>, <code>mongoloide</code>,
-                                <code>mongolóide</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">CAPACITISMO</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>aleijado</code>, <code>aleijadinho</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">CAPACITISMO</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>autista de m</code>, <code>down de m</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">CAPACITISMO</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>deficiente inutil</code>, <code>deficiente inútil</code>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <!-- CAPACITISMO -->
+          <div class="section">CAPACITISMO</div>
+          <table class="list">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Nível</th>
+                <th>Termo/Frase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">CAPACITISMO</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>retardado</code>, <code>mongoloide</code>,
+                  <code>mongolóide</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">CAPACITISMO</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>aleijado</code>, <code>aleijadinho</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">CAPACITISMO</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>autista de m</code>, <code>down de m</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">CAPACITISMO</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>deficiente inutil</code>, <code>deficiente inútil</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <!-- RELIGIÃO -->
-                <div class="section">RELIGIÃO</div>
-                <table class="list">
-                    <thead>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Nível</th>
-                            <th>Termo/Frase</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="cat">RELIGIAO</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>queimar terreiro</code>, <code>macumbeiro imundo</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">RELIGIAO</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>evangelico burro</code>, <code>evangélico burro</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">RELIGIAO</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>catolico burro</code>, <code>católico burro</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">RELIGIAO</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term"><code>judeu imundo</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">RELIGIAO</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>muçulmano terrorista</code>,
-                                <code>musulmano terrorista</code>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <!-- RELIGIÃO -->
+          <div class="section">RELIGIÃO</div>
+          <table class="list">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Nível</th>
+                <th>Termo/Frase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">RELIGIAO</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>queimar terreiro</code>, <code>macumbeiro imundo</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">RELIGIAO</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>evangelico burro</code>, <code>evangélico burro</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">RELIGIAO</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>catolico burro</code>, <code>católico burro</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">RELIGIAO</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term"><code>judeu imundo</code></td>
+              </tr>
+              <tr>
+                <td class="cat">RELIGIAO</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>muçulmano terrorista</code>,
+                  <code>musulmano terrorista</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <!-- GORDOFOBIA -->
-                <div class="section">GORDOFOBIA</div>
-                <table class="list">
-                    <thead>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Nível</th>
-                            <th>Termo/Frase</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="cat">GORDOFOBIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>orco gordo</code>, <code>gorda imunda</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">GORDOFOBIA</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>obeso inutil</code>, <code>obeso inútil</code>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <!-- GORDOFOBIA -->
+          <div class="section">GORDOFOBIA</div>
+          <table class="list">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Nível</th>
+                <th>Termo/Frase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">GORDOFOBIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>orco gordo</code>, <code>gorda imunda</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">GORDOFOBIA</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>obeso inutil</code>, <code>obeso inútil</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <!-- INCITAÇÃO -->
-                <div class="section">INCITAÇÃO À VIOLÊNCIA / AUTOAGRESSÃO</div>
-                <table class="list">
-                    <thead>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Nível</th>
-                            <th>Termo/Frase</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="cat">INCITACAO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term">
-                                <code>se mata</code>, <code>se mata logo</code>,
-                                <code>vai se matar</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">INCITACAO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term">
-                                <code>tem que morrer</code>, <code>merece morrer</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">INCITACAO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term">
-                                <code>mataria esse povo</code>, <code>matar esse povo</code>,
-                                <code>linchar</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">INCITACAO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term">
-                                <code>espancar ate morrer</code>, <code>espancar até morrer</code>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <!-- INCITAÇÃO -->
+          <div class="section">INCITAÇÃO À VIOLÊNCIA / AUTOAGRESSÃO</div>
+          <table class="list">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Nível</th>
+                <th>Termo/Frase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">INCITACAO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term">
+                  <code>se mata</code>, <code>se mata logo</code>,
+                  <code>vai se matar</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">INCITACAO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term">
+                  <code>tem que morrer</code>, <code>merece morrer</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">INCITACAO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term">
+                  <code>mataria esse povo</code>, <code>matar esse povo</code>,
+                  <code>linchar</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">INCITACAO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term">
+                  <code>espancar ate morrer</code>,
+                  <code>espancar até morrer</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <!-- PALAVRÕES -->
-                <div class="section">PALAVRÕES</div>
-                <table class="list">
-                    <thead>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Nível</th>
-                            <th>Termo/Frase</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="cat">PALAVROES</td>
-                            <td><span class="badge lvl1">1</span></td>
-                            <td class="term">
-                                <code>filho da puta</code>, <code>vai tomar no cu</code>,
-                                <code>vai toma no cu</code>, <code>tomar no cu</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">PALAVROES</td>
-                            <td><span class="badge lvl1">1</span></td>
-                            <td class="term">
-                                <code>vai se foder</code>, <code>vai se ferrar</code>,
-                                <code>se foder</code>, <code>se ferrar</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">PALAVROES</td>
-                            <td><span class="badge lvl1">1</span></td>
-                            <td class="term">
-                                <code>puta que pariu</code>, <code>porra</code>,
-                                <code>caralho</code>, <code>merda</code>, <code>bosta</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">PALAVROES</td>
-                            <td><span class="badge lvl1">1</span></td>
-                            <td class="term">
-                                <code>arrombado</code>, <code>desgraçado</code>,
-                                <code>vagabundo</code>, <code>otario</code>, <code>otário</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">PALAVROES</td>
-                            <td><span class="badge lvl1">1</span></td>
-                            <td class="term">
-                                <code>pau no cu</code>, <code>pau no seu cu</code>,
-                                <code>cuzão</code>, <code>cuzao</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">PALAVROES</td>
-                            <td><span class="badge lvl1">1</span></td>
-                            <td class="term">
-                                <code>buceta</code>, <code>xoxota</code>, <code>piroca</code>,
-                                <code>pica</code>, <code>pau duro</code>, <code>rola</code>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <!-- PALAVRÕES -->
+          <div class="section">PALAVRÕES</div>
+          <table class="list">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Nível</th>
+                <th>Termo/Frase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">PALAVROES</td>
+                <td><span class="badge lvl1">1</span></td>
+                <td class="term">
+                  <code>filho da puta</code>, <code>vai tomar no cu</code>,
+                  <code>vai toma no cu</code>, <code>tomar no cu</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">PALAVROES</td>
+                <td><span class="badge lvl1">1</span></td>
+                <td class="term">
+                  <code>vai se foder</code>, <code>vai se ferrar</code>,
+                  <code>se foder</code>, <code>se ferrar</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">PALAVROES</td>
+                <td><span class="badge lvl1">1</span></td>
+                <td class="term">
+                  <code>puta que pariu</code>, <code>porra</code>,
+                  <code>caralho</code>, <code>merda</code>, <code>bosta</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">PALAVROES</td>
+                <td><span class="badge lvl1">1</span></td>
+                <td class="term">
+                  <code>arrombado</code>, <code>desgraçado</code>,
+                  <code>vagabundo</code>, <code>otario</code>,
+                  <code>otário</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">PALAVROES</td>
+                <td><span class="badge lvl1">1</span></td>
+                <td class="term">
+                  <code>pau no cu</code>, <code>pau no seu cu</code>,
+                  <code>cuzão</code>, <code>cuzao</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">PALAVROES</td>
+                <td><span class="badge lvl1">1</span></td>
+                <td class="term">
+                  <code>buceta</code>, <code>xoxota</code>, <code>piroca</code>,
+                  <code>pica</code>, <code>pau duro</code>, <code>rola</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <!-- ASSÉDIO / ESTUPRO -->
-                <div class="section">ASSÉDIO / ESTUPRO</div>
-                <table class="list">
-                    <thead>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Nível</th>
-                            <th>Termo/Frase</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="cat">ASSEDIO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term">
-                                <code>estuprar</code>, <code>te estuprar</code>,
-                                <code>merece ser estuprada</code>, <code>estupro bem feito</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">ASSEDIO</td>
-                            <td><span class="badge lvl2">2</span></td>
-                            <td class="term">
-                                <code>forçar sexo</code>, <code>sexo forçado</code>,
-                                <code>apertar sua bunda</code>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <!-- ASSÉDIO / ESTUPRO -->
+          <div class="section">ASSÉDIO / ESTUPRO</div>
+          <table class="list">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Nível</th>
+                <th>Termo/Frase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">ASSEDIO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term">
+                  <code>estuprar</code>, <code>te estuprar</code>,
+                  <code>merece ser estuprada</code>,
+                  <code>estupro bem feito</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">ASSEDIO</td>
+                <td><span class="badge lvl2">2</span></td>
+                <td class="term">
+                  <code>forçar sexo</code>, <code>sexo forçado</code>,
+                  <code>apertar sua bunda</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <!-- FRASES-ALVO -->
-                <div class="section">FRASES-ALVO</div>
-                <table class="list">
-                    <thead>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Nível</th>
-                            <th>Termo/Frase</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="cat">FRASES_ALVO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term">
-                                <code>macaco imundo</code>, <code>macaco fedido</code>,
-                                <code>traveco nojento</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">FRASES_ALVO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term"><code>volta para a senzala</code></td>
-                        </tr>
-                        <tr>
-                            <td class="cat">FRASES_ALVO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term">
-                                <code>white lives matter only</code>,
-                                <code>only white lives matter</code>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cat">FRASES_ALVO</td>
-                            <td><span class="badge lvl3">3</span></td>
-                            <td class="term">
-                                <code>queimar judeu</code>, <code>matar gay</code>,
-                                <code>expulsar imigrante</code>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+          <!-- FRASES-ALVO -->
+          <div class="section">FRASES-ALVO</div>
+          <table class="list">
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Nível</th>
+                <th>Termo/Frase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cat">FRASES_ALVO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term">
+                  <code>macaco imundo</code>, <code>macaco fedido</code>,
+                  <code>traveco nojento</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">FRASES_ALVO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term"><code>volta para a senzala</code></td>
+              </tr>
+              <tr>
+                <td class="cat">FRASES_ALVO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term">
+                  <code>white lives matter only</code>,
+                  <code>only white lives matter</code>
+                </td>
+              </tr>
+              <tr>
+                <td class="cat">FRASES_ALVO</td>
+                <td><span class="badge lvl3">3</span></td>
+                <td class="term">
+                  <code>queimar judeu</code>, <code>matar gay</code>,
+                  <code>expulsar imigrante</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-                <p class="update-info">
-                    <i class="fas fa-calendar-alt"></i>
-                    Atualizado em <span id="d"></span>
-                </p>
-            </section>
-        </div>
+          <p class="update-info">
+            <i class="fas fa-calendar-alt"></i>
+            Atualizado em <span id="d"></span>
+          </p>
+        </section>
+      </div>
     </main>
 
     <footer>
@@ -720,7 +759,9 @@
     </footer>
 
     <script>
-        document.getElementById("d").textContent = new Date().toLocaleDateString('pt-BR');
+      document.getElementById("d").textContent = new Date().toLocaleDateString(
+        "pt-BR"
+      );
     </script>
-</body>
+  </body>
 </html>
