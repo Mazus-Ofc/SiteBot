@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-<!-- Shared head include -->
-<link rel="stylesheet" href="/assets/styles.css">
-<link rel="stylesheet" href="/assets/site.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-</head>
+    <!-- Shared head include -->
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/site.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
   <body>
     <header>
       <div class="container">
-        <nav class="quick-links" style="justify-content:space-between;align-items:center;padding:12px 0">
+        <nav
+          class="quick-links"
+          style="
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+          "
+        >
           <div class="right">
-            <a href="../" class="btn btn-orange"><i class="fa-solid fa-robot"></i>&nbsp; Voltar para o Bot</a>
+            <a href="../" class="btn btn-orange"
+              ><i class="fa-solid fa-robot"></i>&nbsp; Voltar para o Bot</a
+            >
           </div>
         </nav>
       </div>
@@ -25,28 +39,61 @@
     <main>
       <section class="hero-discord section">
         <div class="container">
-          <div class="card" style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;justify-content:space-between">
-            <div style="min-width:260px;flex:1 1 420px">
-              <h1 class="title"><i class="fa-brands fa-discord"></i> Mazinho • Bot para Discord</h1>
-              <p class="small">Estilizado com a identidade visual do Discord (blurple e tons escuros) e integrado ao seu projeto atual.</p>
+          <div
+            class="card"
+            style="
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              flex-wrap: wrap;
+              justify-content: space-between;
+            "
+          >
+            <div style="min-width: 260px; flex: 1 1 420px">
+              <h1 class="title">
+                <i class="fa-brands fa-discord"></i> Mazinho • Bot para Discord
+              </h1>
+              <p class="small">
+                Estilizado com a identidade visual do Discord (blurple e tons
+                escuros) e integrado ao seu projeto atual.
+              </p>
               <div class="quick-links">
-                <a class="btn btn-discord btn-lg" href="https://discord.com/api/oauth2/authorize?client_id=SEU_CLIENT_ID_AQUI&permissions=8&scope=bot%20applications.commands" target="_blank" rel="noopener">
-                  <span class="icon"><i class="fa-brands fa-discord btn-icon"></i></span> Adicionar ao Discord
+                <a
+                  class="btn btn-discord btn-lg"
+                  href="https://discord.com/api/oauth2/authorize?client_id=1343405265294458941&permissions=8&scope=bot%20applications.commands"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="icon"
+                    ><i class="fa-brands fa-discord btn-icon"></i
+                  ></span>
+                  Adicionar ao Discord
                 </a>
                 <a class="btn btn-orange btn-lg" href="/mazinho.org/comandos/">
                   <i class="fa-solid fa-terminal"></i>&nbsp; Ver Comandos
                 </a>
               </div>
-              <p class="small">Precisa do link de convite? Use <span class="code">/applications</span> no Portal do Discord para copiar seu <em>OAuth2 URL</em>.</p>
+              <p class="small">
+                Precisa do link de convite? Use
+                <span class="code">/applications</span> no Portal do Discord
+                para copiar seu <em>OAuth2 URL</em>.
+              </p>
             </div>
-            <div style="flex:1 1 300px;min-width:280px">
-              <div class="card" style="text-align:center">
+            <div style="flex: 1 1 300px; min-width: 280px">
+              <div class="card" style="text-align: center">
                 <div class="badge">Status</div>
-                <h3 style="margin:.4rem 0 0">Online</h3>
+                <h3 style="margin: 0.4rem 0 0">Online</h3>
                 <p class="small">Rodando na sua VPS Ubuntu (PM2 recomendado)</p>
-                <div class="quick-links" style="justify-content:center">
-                  <a class="btn btn-outline-dark" href="/mazinho.org/sobre/"><i class="fa-solid fa-circle-info"></i>&nbsp; Sobre</a>
-                  <a class="btn btn-outline-dark" href="/mazinho.org/palavras-proibidas/"><i class="fa-solid fa-shield-halved"></i>&nbsp; Palavras proibidas</a>
+                <div class="quick-links" style="justify-content: center">
+                  <a class="btn btn-outline-dark" href="/mazinho.org/sobre/"
+                    ><i class="fa-solid fa-circle-info"></i>&nbsp; Sobre</a
+                  >
+                  <a
+                    class="btn btn-outline-dark"
+                    href="/mazinho.org/palavras-proibidas/"
+                    ><i class="fa-solid fa-shield-halved"></i>&nbsp; Palavras
+                    proibidas</a
+                  >
                 </div>
               </div>
             </div>
@@ -69,8 +116,13 @@
           <div class="card">
             <h2><i class="fa-solid fa-link"></i> Convite OAuth2</h2>
             <p>Exemplo de URL:</p>
-            <code class="code">https://discord.com/api/oauth2/authorize?client_id=SEU_CLIENT_ID&permissions=8&scope=bot%20applications.commands</code>
-            <p class="small">Troque <strong>SEU_CLIENT_ID</strong> pelo ID do app do Discord e ajuste as permissões.</p>
+            <code class="code"
+              >https://discord.com/api/oauth2/authorize?client_id=SEU_CLIENT_ID&permissions=8&scope=bot%20applications.commands</code
+            >
+            <p class="small">
+              Troque <strong>SEU_CLIENT_ID</strong> pelo ID do app do Discord e
+              ajuste as permissões.
+            </p>
           </div>
         </div>
       </section>
@@ -79,13 +131,32 @@
         <div class="container">
           <div class="card">
             <h2><i class="fa-solid fa-terminal"></i> Comandos</h2>
-            <p>Consulte a página <a href="/mazinho.org/comandos/">Comandos</a> para a lista completa. Abaixo um exemplo de comandos populares:</p>
+            <p>
+              Consulte a página
+              <a href="/mazinho.org/comandos/">Comandos</a> para a lista
+              completa. Abaixo um exemplo de comandos populares:
+            </p>
             <ul class="grid grid-2">
-              <li><span class="badge">/setup</span> Configuração inicial do servidor</li>
-              <li><span class="badge">/divulgacao canal</span> Define o canal de anúncios</li>
-              <li><span class="badge">/adicionar-youtube</span> Adiciona um canal do YouTube para monitorar</li>
-              <li><span class="badge">/adicionar-twitch</span> Adiciona um canal da Twitch para monitorar</li>
-              <li><span class="badge">/palavras</span> Mostra/reseta níveis de termos proibidos</li>
+              <li>
+                <span class="badge">/setup</span> Configuração inicial do
+                servidor
+              </li>
+              <li>
+                <span class="badge">/divulgacao canal</span> Define o canal de
+                anúncios
+              </li>
+              <li>
+                <span class="badge">/adicionar-youtube</span> Adiciona um canal
+                do YouTube para monitorar
+              </li>
+              <li>
+                <span class="badge">/adicionar-twitch</span> Adiciona um canal
+                da Twitch para monitorar
+              </li>
+              <li>
+                <span class="badge">/palavras</span> Mostra/reseta níveis de
+                termos proibidos
+              </li>
             </ul>
           </div>
         </div>
