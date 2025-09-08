@@ -81,3 +81,59 @@ pre { padding: 12px; }
   margin: 0;
   padding: 0;
 }
+
+
+/* === Badges & Níveis (Palavras Proibidas) === */
+:root {
+  --lvl1-bg: rgba(56, 142, 60, 0.15);   /* verde leve */
+  --lvl1-bd: rgba(56, 142, 60, 0.45);
+  --lvl1-fg: #a5d6a7;
+
+  --lvl2-bg: rgba(255, 152, 0, 0.15);   /* laranja grave */
+  --lvl2-bd: rgba(255, 152, 0, 0.45);
+  --lvl2-fg: #ffcc80;
+
+  --lvl3-bg: rgba(229, 57, 53, 0.16);   /* vermelho crítico */
+  --lvl3-bd: rgba(229, 57, 53, 0.50);
+  --lvl3-fg: #ef9a9a;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  white-space: nowrap;
+}
+.badge i { font-size: 10px; }
+
+.badge.lvl1 { background: var(--lvl1-bg); border-color: var(--lvl1-bd); color: var(--lvl1-fg); }
+.badge.lvl2 { background: var(--lvl2-bg); border-color: var(--lvl2-bd); color: var(--lvl2-fg); }
+.badge.lvl3 { background: var(--lvl3-bg); border-color: var(--lvl3-bd); color: var(--lvl3-fg); }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 14px 0 0;
+}
+
+/* === Tipografia rica para páginas de conteúdo (Sobre) === */
+.prose {
+  --prose-max: 900px;
+  max-width: var(--prose-max);
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.75;
+}
+.prose p { margin: 12px 0 16px; color: var(--text); }
+.prose strong { color: var(--text); }
+.prose h2, .prose h3 { margin: 26px 0 12px; line-height: 1.3; }
+.prose ul, .prose ol { margin: 10px 0 18px 20px; }
+.prose li { margin: 6px 0; }
+.prose .feature-list { list-style: disc; margin-left: 22px; }
