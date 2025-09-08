@@ -178,3 +178,12 @@ pre { padding: 12px; }
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
 /* Responsive spacing */
 @media (max-width:640px){.hero-discord .title{font-size:1.6rem}}
+
+/* === Top nav alignment for homepage === */
+.top-nav{display:flex;align-items:center;gap:.75rem}
+.top-nav .nav-links{display:flex;gap:1rem;flex-wrap:wrap}
+.top-nav .nav-actions{margin-left:auto}
+@media (max-width:720px){
+  .top-nav{flex-wrap:wrap}
+  .top-nav .nav-actions{margin-left:0;width:100%;display:flex;justify-content:flex-end}
+}
