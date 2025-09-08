@@ -9,54 +9,74 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <header>
-      <h1>🤖 Site do Bot Mazinho</h1>
-      <nav>
-        <a href="/">Início</a> | <a href="/comandos/">Comandos</a> |
-        <a href="/sobre/">Sobre</a> |
-        <a href="/palavras-proibidas/">Palavras Proibidas</a>
-      </nav>
+      <!-- Adicionando container e melhorando estrutura do header -->
+      <div class="container">
+        <h1><i class="fas fa-robot"></i> Bot Mazinho</h1>
+        <nav>
+          <a href="/" class="active">Início</a>
+          <a href="/comandos/">Comandos</a>
+          <a href="/sobre/">Sobre</a>
+          <a href="/palavras-proibidas/">Palavras Proibidas</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section class="intro">
-        <p>
-          Bem-vindo ao site do <strong>Bot Mazinho</strong>! 🎉<br />
-          Aqui você encontra informações, a lista de comandos e links para as
-          minhas redes sociais.
-        </p>
-      </section>
+      <div class="container">
+        <!-- Adicionando seção hero moderna -->
+        <section class="hero">
+          <h2>🎮 Bem-vindo ao Mazinho Bot</h2>
+          <p>
+            O bot mais completo para sua stream na Twitch e servidor Discord!
+            Comandos divertidos, sistema de ranking e muito mais.
+          </p>
+        </section>
 
-      <section class="social">
-        <h2>🌐 Minhas Redes</h2>
-        <div class="social-links">
-          <a href="https://www.youtube.com/@mazzus" target="_blank" class="yt">
-            <i class="fab fa-youtube"></i> YouTube
-          </a>
-          <a
-            href="https://www.twitch.tv/MazusOficial"
-            target="_blank"
-            class="twitch"
-          >
-            <i class="fab fa-twitch"></i> Twitch
-          </a>
-          <a href="https://discord.gg/seulink" target="_blank" class="discord">
-            <i class="fab fa-discord"></i> Discord
-          </a>
-          <a href="https://twitter.com/seulink" target="_blank" class="twitter">
-            <i class="fab fa-x-twitter"></i> Twitter
-          </a>
-          <a href="https://instagram.com/seulink" target="_blank" class="insta">
-            <i class="fab fa-instagram"></i> Instagram
-          </a>
-        </div>
-      </section>
+        <section class="intro">
+          <p>
+            Aqui você encontra todas as informações sobre o <strong>Bot Mazinho</strong>! 🎉<br />
+            Explore os comandos disponíveis, conheça as funcionalidades e siga nossas redes sociais para ficar por dentro de todas as novidades.
+          </p>
+        </section>
+
+        <section class="social">
+          <h2><i class="fas fa-share-alt"></i> Minhas Redes Sociais</h2>
+          <div class="social-links">
+            <a href="https://www.youtube.com/@mazzus" target="_blank" class="yt">
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+            <a
+              href="https://www.twitch.tv/MazusOficial"
+              target="_blank"
+              class="twitch"
+            >
+              <i class="fab fa-twitch"></i> Twitch
+            </a>
+            <a href="https://discord.gg/seulink" target="_blank" class="discord">
+              <i class="fab fa-discord"></i> Discord
+            </a>
+            <a href="https://twitter.com/seulink" target="_blank" class="twitter">
+              <i class="fab fa-x-twitter"></i> Twitter
+            </a>
+            <a href="https://instagram.com/seulink" target="_blank" class="insta">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer>
-      <p>© 2025 Mazinho</p>
+      <!-- Melhorando o footer -->
+      <div class="container">
+        <p>© 2025 Mazinho Bot - Desenvolvido com ❤️ para a comunidade</p>
+      </div>
     </footer>
   </body>
 </html>

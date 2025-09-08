@@ -2,75 +2,178 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
-    <title>Comandos do Bot</title>
+    <title>Comandos do Bot Mazinho</title>
     <link rel="stylesheet" href="../assets/styles.css" />
+    <!-- Font Awesome para ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <header>
-      <h1>📜 Lista de Comandos</h1>
-      <nav>
-        <a href="/">Início</a> | <a href="/comandos/">Comandos</a> |
-        <a href="/sobre/">Sobre</a> |
-        <a href="/palavras-proibidas/">Palavras Proibidas</a>
-      </nav>
+      <!-- Adicionando container e melhorando estrutura do header -->
+      <div class="container">
+        <h1><i class="fas fa-robot"></i> Bot Mazinho</h1>
+        <nav>
+          <a href="/">Início</a>
+          <a href="/comandos/" class="active">Comandos</a>
+          <a href="/sobre/">Sobre</a>
+          <a href="/palavras-proibidas/">Palavras Proibidas</a>
+        </nav>
+      </div>
     </header>
+
     <main>
-      <table>
-        <thead>
-          <tr>
-            <th>Comando</th>
-            <th>Descrição</th>
-            <th>Exemplo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>!lord</code></td>
-            <td>Informe ao Chat que você é lord.</td>
-            <td><code>!lord</code></td>
-          </tr>
-          <tr>
-            <td><code>!sad</code></td>
-            <td>Zoe o Mazus quando ele perder.</td>
-            <td><code>!sad</code></td>
-          </tr>
-          <tr>
-            <td><code>!falar</code></td>
-            <td>Faça o bot falar o que vocês escrever!</td>
-            <td><code>!falar já deixei o like</code></td>
-          </tr>
-          <tr>
-            <td><code>!mazus</code></td>
-            <td>Divulge seu Canal.</td>
-            <td><code>!mazus</code></td>
-          </tr>
-          <tr>
-            <td><code>!top10</code></td>
-            <td>Ranking geral de usuários.</td>
-            <td><code>!top10</code></td>
-          </tr>
-          <tr>
-            <td><code>!top10rank</code></td>
-            <td>Ranking por categoria.</td>
-            <td><code>!top10rank</code></td>
-          </tr>
-          <tr>
-            <td><code>!rank</code></td>
-            <td>Mostra seu nível atual.</td>
-            <td><code>!rank</code></td>
-          </tr>
-          <tr>
-            <td><code>!som &lt;nome&gt;</code></td>
-            <td>Reproduz um som.</td>
-            <td><code>!som aincafezinho</code></td>
-          </tr>
-          <tr>
-            <td><code>!comandos</code></td>
-            <td>Mostra este link no chat.</td>
-            <td><code>!comandos</code></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="container">
+        <!-- Adicionando seção hero para comandos -->
+        <section class="hero">
+          <h2><i class="fas fa-terminal"></i> Lista de Comandos</h2>
+          <p>
+            Todos os comandos disponíveis do Bot Mazinho para sua diversão na stream e Discord!
+          </p>
+        </section>
+
+        <!-- Organizando comandos em cards modernos -->
+        <section class="commands-section">
+          <div class="commands-grid">
+            <div class="command-card">
+              <h3><i class="fas fa-crown"></i> Comando Lord</h3>
+              <p><strong>Comando:</strong> <code>!lord</code></p>
+              <p><strong>Descrição:</strong> Informe ao Chat que você é lord.</p>
+              <p><strong>Exemplo:</strong> <code>!lord</code></p>
+            </div>
+
+            <div class="command-card">
+              <h3><i class="fas fa-sad-tear"></i> Comando Sad</h3>
+              <p><strong>Comando:</strong> <code>!sad</code></p>
+              <p><strong>Descrição:</strong> Zoe o Mazus quando ele perder.</p>
+              <p><strong>Exemplo:</strong> <code>!sad</code></p>
+            </div>
+
+            <div class="command-card">
+              <h3><i class="fas fa-comment"></i> Comando Falar</h3>
+              <p><strong>Comando:</strong> <code>!falar</code></p>
+              <p><strong>Descrição:</strong> Faça o bot falar o que você escrever!</p>
+              <p><strong>Exemplo:</strong> <code>!falar já deixei o like</code></p>
+            </div>
+
+            <div class="command-card">
+              <h3><i class="fas fa-broadcast-tower"></i> Comando Mazus</h3>
+              <p><strong>Comando:</strong> <code>!mazus</code></p>
+              <p><strong>Descrição:</strong> Divulge seu Canal.</p>
+              <p><strong>Exemplo:</strong> <code>!mazus</code></p>
+            </div>
+
+            <div class="command-card">
+              <h3><i class="fas fa-trophy"></i> Top 10 Geral</h3>
+              <p><strong>Comando:</strong> <code>!top10</code></p>
+              <p><strong>Descrição:</strong> Ranking geral de usuários.</p>
+              <p><strong>Exemplo:</strong> <code>!top10</code></p>
+            </div>
+
+            <div class="command-card">
+              <h3><i class="fas fa-medal"></i> Top 10 Rank</h3>
+              <p><strong>Comando:</strong> <code>!top10rank</code></p>
+              <p><strong>Descrição:</strong> Ranking por categoria.</p>
+              <p><strong>Exemplo:</strong> <code>!top10rank</code></p>
+            </div>
+
+            <div class="command-card">
+              <h3><i class="fas fa-chart-line"></i> Seu Rank</h3>
+              <p><strong>Comando:</strong> <code>!rank</code></p>
+              <p><strong>Descrição:</strong> Mostra seu nível atual.</p>
+              <p><strong>Exemplo:</strong> <code>!rank</code></p>
+            </div>
+
+            <div class="command-card">
+              <h3><i class="fas fa-volume-up"></i> Reproduzir Som</h3>
+              <p><strong>Comando:</strong> <code>!som &lt;nome&gt;</code></p>
+              <p><strong>Descrição:</strong> Reproduz um som.</p>
+              <p><strong>Exemplo:</strong> <code>!som aincafezinho</code></p>
+            </div>
+
+            <div class="command-card">
+              <h3><i class="fas fa-list"></i> Lista Comandos</h3>
+              <p><strong>Comando:</strong> <code>!comandos</code></p>
+              <p><strong>Descrição:</strong> Mostra este link no chat.</p>
+              <p><strong>Exemplo:</strong> <code>!comandos</code></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mantendo tabela como alternativa -->
+        <section style="margin-top: 50px;">
+          <h2 style="color: #ff6b35; text-align: center; margin-bottom: 30px;">
+            <i class="fas fa-table"></i> Tabela Completa de Comandos
+          </h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descrição</th>
+                <th>Exemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>!lord</code></td>
+                <td>Informe ao Chat que você é lord.</td>
+                <td><code>!lord</code></td>
+              </tr>
+              <tr>
+                <td><code>!sad</code></td>
+                <td>Zoe o Mazus quando ele perder.</td>
+                <td><code>!sad</code></td>
+              </tr>
+              <tr>
+                <td><code>!falar</code></td>
+                <td>Faça o bot falar o que você escrever!</td>
+                <td><code>!falar já deixei o like</code></td>
+              </tr>
+              <tr>
+                <td><code>!mazus</code></td>
+                <td>Divulge seu Canal.</td>
+                <td><code>!mazus</code></td>
+              </tr>
+              <tr>
+                <td><code>!top10</code></td>
+                <td>Ranking geral de usuários.</td>
+                <td><code>!top10</code></td>
+              </tr>
+              <tr>
+                <td><code>!top10rank</code></td>
+                <td>Ranking por categoria.</td>
+                <td><code>!top10rank</code></td>
+              </tr>
+              <tr>
+                <td><code>!rank</code></td>
+                <td>Mostra seu nível atual.</td>
+                <td><code>!rank</code></td>
+              </tr>
+              <tr>
+                <td><code>!som &lt;nome&gt;</code></td>
+                <td>Reproduz um som.</td>
+                <td><code>!som aincafezinho</code></td>
+              </tr>
+              <tr>
+                <td><code>!comandos</code></td>
+                <td>Mostra este link no chat.</td>
+                <td><code>!comandos</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
     </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 Mazinho Bot - Desenvolvido com ❤️ para a comunidade</p>
+      </div>
+    </footer>
   </body>
 </html>
