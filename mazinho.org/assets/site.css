@@ -187,3 +187,15 @@ pre { padding: 12px; }
   .top-nav{flex-wrap:wrap}
   .top-nav .nav-actions{margin-left:0;width:100%;display:flex;justify-content:flex-end}
 }
+
+/* === Discord highlight card === */
+.discord-highlight {margin:3rem 0;}
+.discord-card {text-align:center;background:var(--discord-dark-2);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:2rem 1.5rem;box-shadow:0 6px 20px rgba(0,0,0,.2);}
+.discord-card h2 {font-size:1.8rem;margin-bottom:1rem;color:var(--discord-blurple);}
+.discord-card p {margin-bottom:1.5rem;font-size:1rem;line-height:1.5;}
+
+/* === Discord highlight section (homepage) === */
+.discord-highlight{margin:3rem 0}
+.discord-card{text-align:center;background:var(--discord-dark-2);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:2rem 1.5rem;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.discord-card h2{font-size:1.8rem;margin-bottom:1rem;color:var(--discord-blurple)}
+.discord-card p{margin-bottom:1.5rem;font-size:1rem;line-height:1.5}
