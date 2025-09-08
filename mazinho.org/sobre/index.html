@@ -1,25 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <title>Sobre o Bot</title>
+    <title>Sobre o Bot • Mazinho</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>ℹ️ Sobre o Bot</h1>
-      <nav>
-        <a href="/">Início</a> | <a href="/comandos/">Comandos</a> |
-        <a href="/sobre/">Sobre</a> |
-        <a href="/palavras-proibidas/">Palavras Proibidas</a>
-      </nav>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <!-- aplicando o mesmo header moderno das outras páginas -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="../assets/logo.png" alt="Mazinho Bot" class="logo" />
+                <span class="brand-text">Mazinho Bot</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="../" class="nav-link"><i class="fas fa-home"></i> Início</a>
+                <a href="../comandos/" class="nav-link"><i class="fas fa-terminal"></i> Comandos</a>
+                <a href="../sobre/" class="nav-link active"><i class="fas fa-info-circle"></i> Sobre</a>
+                <a href="../palavras-proibidas/" class="nav-link"><i class="fas fa-ban"></i> Palavras Proibidas</a>
+            </nav>
+        </div>
     </header>
-    <main>
-      <p>
-        O <strong>Bot Mazinho</strong> foi criado para ajudar na interação das
-        lives no YouTube e Twitch.
-      </p>
-      <p>Aqui você encontra informações e comandos disponíveis.</p>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- adicionando hero section moderna -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <i class="fas fa-info-circle"></i>
+                        Sobre o Bot Mazinho
+                    </h1>
+                    <p class="hero-subtitle">Conheça mais sobre o bot que revoluciona suas lives</p>
+                </div>
+            </section>
+
+            <!-- organizando conteúdo em cards modernos -->
+            <section class="content-section">
+                <div class="info-card">
+                    <div class="card-header">
+                        <i class="fas fa-robot"></i>
+                        <h2>O que é o Bot Mazinho?</h2>
+                    </div>
+                    <div class="card-content">
+                        <p>O <strong>Bot Mazinho</strong> foi criado para ajudar na interação das lives no YouTube e Twitch, proporcionando uma experiência mais dinâmica e divertida para streamers e viewers.</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-header">
+                        <i class="fas fa-star"></i>
+                        <h2>Principais Funcionalidades</h2>
+                    </div>
+                    <div class="card-content">
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Moderação automática do chat</li>
+                            <li><i class="fas fa-check"></i> Comandos interativos para viewers</li>
+                            <li><i class="fas fa-check"></i> Sistema de palavras proibidas</li>
+                            <li><i class="fas fa-check"></i> Integração com Twitch e YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-header">
+                        <i class="fas fa-code"></i>
+                        <h2>Informações Técnicas</h2>
+                    </div>
+                    <div class="card-content">
+                        <p>Aqui você encontra informações detalhadas sobre comandos disponíveis, configurações e como utilizar todas as funcionalidades do bot em suas transmissões.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
-  </body>
+
+    <!-- adicionando footer moderno -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mazinho Bot. Desenvolvido para streamers brasileiros.</p>
+        </div>
+    </footer>
+</body>
 </html>
