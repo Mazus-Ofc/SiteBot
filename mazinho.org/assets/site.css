@@ -1,4 +1,3 @@
-
 /* === Shared layout & theme === */
 :root {
   --bg: #0f1220;
@@ -9,11 +8,22 @@
   --brand: #6c8cff;
 }
 
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+}
 
 /* Unify container width across all pages (incl. palavras-proibidas which used .wrap) */
-.container, .wrap {
+.container,
+.wrap {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
@@ -50,24 +60,32 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   border-collapse: collapse;
   font-size: 14px;
 }
-.table th, .table td {
+.table th,
+.table td {
   padding: 10px 12px;
   border-bottom: 1px solid var(--border);
   text-align: left;
 }
-.table th { color: var(--muted); font-weight: 600; }
-.table tr:hover td { background: rgba(255,255,255,0.02); }
+.table th {
+  color: var(--muted);
+  font-weight: 600;
+}
+.table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
 
 /* Code blocks */
-code, pre {
+code,
+pre {
   background: #13162a;
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 2px 6px;
   overflow: auto;
 }
-pre { padding: 12px; }
-
+pre {
+  padding: 12px;
+}
 
 /* === Hero width fix (padroniza o retângulo do cabeçalho) === */
 .hero {
@@ -82,19 +100,18 @@ pre { padding: 12px; }
   padding: 0;
 }
 
-
 /* === Badges & Níveis (Palavras Proibidas) === */
 :root {
-  --lvl1-bg: rgba(56, 142, 60, 0.15);   /* verde leve */
+  --lvl1-bg: rgba(56, 142, 60, 0.15); /* verde leve */
   --lvl1-bd: rgba(56, 142, 60, 0.45);
   --lvl1-fg: #a5d6a7;
 
-  --lvl2-bg: rgba(255, 152, 0, 0.15);   /* laranja grave */
+  --lvl2-bg: rgba(255, 152, 0, 0.15); /* laranja grave */
   --lvl2-bd: rgba(255, 152, 0, 0.45);
   --lvl2-fg: #ffcc80;
 
-  --lvl3-bg: rgba(229, 57, 53, 0.16);   /* vermelho crítico */
-  --lvl3-bd: rgba(229, 57, 53, 0.50);
+  --lvl3-bg: rgba(229, 57, 53, 0.16); /* vermelho crítico */
+  --lvl3-bd: rgba(229, 57, 53, 0.5);
   --lvl3-fg: #ef9a9a;
 }
 
@@ -106,15 +123,29 @@ pre { padding: 12px; }
   padding: 6px 10px;
   border-radius: 9999px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text);
   white-space: nowrap;
 }
-.badge i { font-size: 10px; }
+.badge i {
+  font-size: 10px;
+}
 
-.badge.lvl1 { background: var(--lvl1-bg); border-color: var(--lvl1-bd); color: var(--lvl1-fg); }
-.badge.lvl2 { background: var(--lvl2-bg); border-color: var(--lvl2-bd); color: var(--lvl2-fg); }
-.badge.lvl3 { background: var(--lvl3-bg); border-color: var(--lvl3-bd); color: var(--lvl3-fg); }
+.badge.lvl1 {
+  background: var(--lvl1-bg);
+  border-color: var(--lvl1-bd);
+  color: var(--lvl1-fg);
+}
+.badge.lvl2 {
+  background: var(--lvl2-bg);
+  border-color: var(--lvl2-bd);
+  color: var(--lvl2-fg);
+}
+.badge.lvl3 {
+  background: var(--lvl3-bg);
+  border-color: var(--lvl3-bd);
+  color: var(--lvl3-fg);
+}
 
 .legend {
   display: flex;
@@ -131,78 +162,260 @@ pre { padding: 12px; }
   font-size: 16px;
   line-height: 1.75;
 }
-.prose p { margin: 12px 0 16px; color: var(--text); }
-.prose strong { color: var(--text); }
-.prose h2, .prose h3 { margin: 26px 0 12px; line-height: 1.3; }
-.prose ul, .prose ol { margin: 10px 0 18px 20px; }
-.prose li { margin: 6px 0; }
-.prose .feature-list { list-style: disc; margin-left: 22px; }
-
-/* === Discord Theming Additions === */
-:root{
-  --discord-blurple:#5865F2;
-  --discord-dark:#23272A;
-  --discord-dark-2:#2C2F33;
-  --discord-green:#57F287;
-  --discord-yellow:#FEE75C;
-  --discord-fuchsia:#EB459E;
-  --brand-orange:#ff7a18; /* project identity accent */
+.prose p {
+  margin: 12px 0 16px;
+  color: var(--text);
+}
+.prose strong {
+  color: var(--text);
+}
+.prose h2,
+.prose h3 {
+  margin: 26px 0 12px;
+  line-height: 1.3;
+}
+.prose ul,
+.prose ol {
+  margin: 10px 0 18px 20px;
+}
+.prose li {
+  margin: 6px 0;
+}
+.prose .feature-list {
+  list-style: disc;
+  margin-left: 22px;
 }
 
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.1rem;border-radius:12px;text-decoration:none;font-weight:600;transition:transform .1s ease, box-shadow .2s ease;box-shadow:0 6px 16px rgba(0,0,0,.12);border:0;cursor:pointer}
-.btn:hover{transform:translateY(-1px)}
-.btn:active{transform:translateY(0) scale(.98)}
-.btn-lg{padding:1rem 1.4rem;font-size:1.05rem;border-radius:14px}
-.btn-block{display:flex;width:100%;justify-content:center}
-.btn-icon{width:1.25rem;height:1.25rem}
+/* === Discord Theming Additions === */
+:root {
+  --discord-blurple: #5865f2;
+  --discord-dark: #23272a;
+  --discord-dark-2: #2c2f33;
+  --discord-green: #57f287;
+  --discord-yellow: #fee75c;
+  --discord-fuchsia: #eb459e;
+  --brand-orange: #ff7a18; /* project identity accent */
+}
 
-.btn-discord{color:#fff;background:var(--discord-blurple)}
-.btn-discord:hover{box-shadow:0 10px 24px rgba(88,101,242,.35)}
-.btn-outline-dark{background:transparent;color:#fff;border:2px solid var(--discord-dark-2)}
-.btn-orange{background:var(--brand-orange);color:#111}
-.btn-orange:hover{box-shadow:0 10px 24px rgba(255,122,24,.3)}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border: 0;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+.btn:active {
+  transform: translateY(0) scale(0.98);
+}
+.btn-lg {
+  padding: 1rem 1.4rem;
+  font-size: 1.05rem;
+  border-radius: 14px;
+}
+.btn-block {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
 
-.card{background:var(--discord-dark-2);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:1.2rem}
-.section{padding:2rem 0}
-.section h2{margin:0 0 .8rem}
-.badge{display:inline-block;border-radius:20px;padding:.25rem .6rem;font-size:.75rem;background:#0002;color:#fff;border:1px solid #fff1}
-.grid{display:grid;gap:1rem}
-.grid-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.hero-discord{background:linear-gradient(180deg,rgba(88,101,242,.12),transparent 60%)}
-.hero-discord .title{font-size:2rem;margin:.6rem 0}
-.small{opacity:.8;font-size:.9rem}
-.code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;background:#0003;border:1px solid #fff1;border-radius:10px;padding:.3rem .5rem}
-.quick-links{display:flex;gap:.75rem;flex-wrap:wrap;margin:1rem 0}
-.icon{display:inline-flex;align-items:center;justify-content:center}
+.btn-discord {
+  color: #fff;
+  background: var(--discord-blurple);
+}
+.btn-discord:hover {
+  box-shadow: 0 10px 24px rgba(88, 101, 242, 0.35);
+}
+.btn-outline-dark {
+  background: transparent;
+  color: #fff;
+  border: 2px solid var(--discord-dark-2);
+}
+.btn-orange {
+  background: var(--brand-orange);
+  color: #111;
+}
+.btn-orange:hover {
+  box-shadow: 0 10px 24px rgba(255, 122, 24, 0.3);
+}
+
+.card {
+  background: var(--discord-dark-2);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 1.2rem;
+}
+.section {
+  padding: 2rem 0;
+}
+.section h2 {
+  margin: 0 0 0.8rem;
+}
+.badge {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  background: #0002;
+  color: #fff;
+  border: 1px solid #fff1;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.hero-discord {
+  background: linear-gradient(
+    180deg,
+    rgba(88, 101, 242, 0.12),
+    transparent 60%
+  );
+}
+.hero-discord .title {
+  font-size: 2rem;
+  margin: 0.6rem 0;
+}
+.small {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+.code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  background: #0003;
+  border: 1px solid #fff1;
+  border-radius: 10px;
+  padding: 0.3rem 0.5rem;
+}
+.quick-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Ensure container utility exists */
-.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
 /* Responsive spacing */
-@media (max-width:640px){.hero-discord .title{font-size:1.6rem}}
+@media (max-width: 640px) {
+  .hero-discord .title {
+    font-size: 1.6rem;
+  }
+}
 
 /* === Top nav alignment for homepage === */
-.top-nav{display:flex;align-items:center;gap:.75rem}
-.top-nav .nav-links{display:flex;gap:1rem;flex-wrap:wrap}
-.top-nav .nav-actions{margin-left:auto}
-@media (max-width:720px){
-  .top-nav{flex-wrap:wrap}
-  .top-nav .nav-actions{margin-left:0;width:100%;display:flex;justify-content:flex-end}
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.top-nav .nav-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.top-nav .nav-actions {
+  margin-left: auto;
+}
+@media (max-width: 720px) {
+  .top-nav {
+    flex-wrap: wrap;
+  }
+  .top-nav .nav-actions {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 /* === Discord highlight card === */
-.discord-highlight {margin:3rem 0;}
-.discord-card {text-align:center;background:var(--discord-dark-2);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:2rem 1.5rem;box-shadow:0 6px 20px rgba(0,0,0,.2);}
-.discord-card h2 {font-size:1.8rem;margin-bottom:1rem;color:var(--discord-blurple);}
-.discord-card p {margin-bottom:1.5rem;font-size:1rem;line-height:1.5;}
+.discord-highlight {
+  margin: 3rem 0;
+}
+.discord-card {
+  text-align: center;
+  background: var(--discord-dark-2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.discord-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--discord-blurple);
+}
+.discord-card p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
 
 /* === Discord highlight section (homepage) === */
-.discord-highlight{margin:3rem 0}
-.discord-card{text-align:center;background:var(--discord-dark-2);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:2rem 1.5rem;box-shadow:0 6px 20px rgba(0,0,0,.2)}
-.discord-card h2{font-size:1.8rem;margin-bottom:1rem;color:var(--discord-blurple)}
-.discord-card p{margin-bottom:1.5rem;font-size:1rem;line-height:1.5}
+.discord-highlight {
+  margin: 3rem 0;
+}
+.discord-card {
+  text-align: center;
+  background: var(--discord-dark-2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+
+  /* ajustes para alinhar com os outros blocos */
+  width: 100%; /* ocupa toda a largura disponível */
+  max-width: 100%; /* não limita largura */
+  margin: 0 auto; /* centraliza caso haja largura máxima */
+}
+.discord-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--discord-blurple);
+}
+.discord-card p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
 
 /* === Top nav alignment (shared) === */
-.top-nav{display:flex;align-items:center;gap:.75rem}
-.top-nav .nav-links{display:flex;gap:1rem;flex-wrap:wrap}
-@media (max-width:720px){
-  .top-nav{flex-wrap:wrap}
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.top-nav .nav-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 720px) {
+  .top-nav {
+    flex-wrap: wrap;
+  }
 }
