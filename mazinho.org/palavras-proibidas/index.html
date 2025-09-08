@@ -66,7 +66,7 @@
       .cat {
         white-space: nowrap;
         font-weight: 600;
-        color: #7aa2ff;
+        color: #ff6b35;
       }
       .term code {
         background: #22273a;
@@ -78,7 +78,7 @@
       .section {
         margin: 28px 0 8px;
         font-size: 18px;
-        color: #7aa2ff;
+        color: #ff6b35;
       }
       .muted {
         color: #a8b0c3;
@@ -91,65 +91,7 @@
         text-decoration: none;
       }
       .backnav a:hover {
-        color: #7aa2ff;
-      }
-
-      .header {
-        background-color: #1a1d2b;
-        padding: 20px 0;
-      }
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-      .nav-brand {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .logo {
-        height: 40px;
-      }
-      .brand-text {
-        font-size: 24px;
-        color: #7aa2ff;
-      }
-      .nav-menu {
-        display: flex;
-        gap: 20px;
-        margin-top: 10px;
-      }
-      .nav-link {
-        color: #a8b0c3;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-      .nav-link.active {
-        color: #7aa2ff;
-        font-weight: bold;
-      }
-      .nav-link:hover {
-        color: #7aa2ff;
-      }
-
-      .main-content {
-        margin-top: 20px;
-      }
-      .hero {
-        background-color: #151826;
-        padding: 40px 0;
-        border-radius: 12px;
-        margin-bottom: 24px;
-      }
-      .hero h2 {
-        color: #7aa2ff;
-        margin: 0 0 10px;
-      }
-      .hero p {
-        color: #a8b0c3;
+        color: #ff6b35;
       }
 
       .warning-card {
@@ -175,40 +117,19 @@
         color: #a8b0c3;
         margin-top: 18px;
       }
-
-      .footer {
-        background-color: #151826;
-        padding: 20px 0;
-        text-align: center;
-        color: #a8b0c3;
-      }
-      .social-links {
-        margin-top: 10px;
-      }
-      .social-link {
-        color: #a8b0c3;
-        text-decoration: none;
-        margin: 0 10px;
-      }
-      .social-link:hover {
-        color: #7aa2ff;
-      }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="../assets/logo.png" alt="Mazinho Bot" class="logo">
-                <span class="brand-text">Mazinho Bot</span>
-            </div>
-            <nav class="nav-menu">
-                <a href="../" class="nav-link"><i class="fas fa-home"></i> Início</a>
-                <a href="../comandos/" class="nav-link"><i class="fas fa-terminal"></i> Comandos</a>
-                <a href="../sobre/" class="nav-link"><i class="fas fa-info-circle"></i> Sobre</a>
-                <a href="../palavras-proibidas/" class="nav-link active"><i class="fas fa-ban"></i> Palavras Proibidas</a>
-            </nav>
-        </div>
+    <header>
+      <div class="container">
+        <h1><i class="fas fa-robot"></i> Bot Mazinho</h1>
+        <nav>
+          <a href="../">Início</a>
+          <a href="../comandos/">Comandos</a>
+          <a href="../sobre/">Sobre</a>
+          <a href="../palavras-proibidas/" class="active">Palavras Proibidas</a>
+        </nav>
+      </div>
     </header>
 
     <section class="hero">
@@ -796,15 +717,10 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2025 Mazinho Bot - Desenvolvido com ❤️ para a comunidade</p>
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-twitch"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
+    <footer>
+      <div class="container">
+        <p>© 2025 Mazinho Bot - Desenvolvido com ❤️ para a comunidade</p>
+      </div>
     </footer>
 
     <script>
