@@ -55,3 +55,67 @@ footer {
   color: #777;
   text-align: center;
 }
+
+.intro {
+  margin: 40px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.social {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.social h2 {
+  color: #7aa2ff;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.social-links a i {
+  font-size: 20px;
+}
+
+.social-links a.yt {
+  background: #ff0000;
+}
+
+.social-links a.twitch {
+  background: #9146ff;
+}
+
+.social-links a.discord {
+  background: #5865f2;
+}
+
+.social-links a.twitter {
+  background: #000; /* estilo X (antigo Twitter) */
+}
+
+.social-links a.insta {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+
+.social-links a:hover {
+  opacity: 0.85;
+  transform: translateY(-3px);
+}
