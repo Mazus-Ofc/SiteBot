@@ -1,3 +1,4 @@
+
 /* === Shared layout & theme === */
 :root {
   --bg: #0f1220;
@@ -8,22 +9,11 @@
   --brand: #6c8cff;
 }
 
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, "Liberation Mono", "Courier New", monospace;
-}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 /* Unify container width across all pages (incl. palavras-proibidas which used .wrap) */
-.container,
-.wrap {
+.container, .wrap {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
@@ -60,32 +50,25 @@ body {
   border-collapse: collapse;
   font-size: 14px;
 }
-.table th,
-.table td {
+.table th, .table td {
   padding: 10px 12px;
   border-bottom: 1px solid var(--border);
   text-align: left;
 }
-.table th {
-  color: var(--muted);
-  font-weight: 600;
-}
-.table tr:hover td {
-  background: rgba(255, 255, 255, 0.02);
-}
+.table th { color: var(--muted); font-weight: 600; }
+.table tr:hover td { background: rgba(255,255,255,0.02); }
 
 /* Code blocks */
-code,
-pre {
+code, pre {
   background: #13162a;
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 2px 6px;
   overflow: auto;
 }
-pre {
-  padding: 12px;
-}
+pre { padding: 12px; }
+
+
 /* === Hero width fix (padroniza o retângulo do cabeçalho) === */
 .hero {
   max-width: 1100px;
