@@ -199,3 +199,10 @@ pre { padding: 12px; }
 .discord-card{text-align:center;background:var(--discord-dark-2);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:2rem 1.5rem;box-shadow:0 6px 20px rgba(0,0,0,.2)}
 .discord-card h2{font-size:1.8rem;margin-bottom:1rem;color:var(--discord-blurple)}
 .discord-card p{margin-bottom:1.5rem;font-size:1rem;line-height:1.5}
+
+/* === Top nav alignment (shared) === */
+.top-nav{display:flex;align-items:center;gap:.75rem}
+.top-nav .nav-links{display:flex;gap:1rem;flex-wrap:wrap}
+@media (max-width:720px){
+  .top-nav{flex-wrap:wrap}
+}
