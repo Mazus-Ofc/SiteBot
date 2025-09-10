@@ -1,22 +1,31 @@
 /* Painel: só ajustes extras em cima do estilo do site */
 
-/* Casca principal */
-.mz-panel {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px 3rem;
-}
-
-/* Navbar do painel usa o header do site, só ajusta espaçamento interno */
+/* === Navbar full-bleed (igual ao header do site) — estável === */
 .mz-navbar {
+  /* ocupa a largura da viewport inteira e “sai” do container central */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  /* layout */
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  /* padding vertical e lateral padrão */
   padding: 12px 20px;
+  padding-left: clamp(16px, 4vw, 32px);
+  padding-right: clamp(16px, 4vw, 32px);
+
+  /* fundo/borda do site */
+  background: rgba(15, 15, 35, 0.9);
+  border-bottom: 2px solid #ff6b35;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
 }
 .mz-navbar h1 {
   font-size: 1.5rem;
   margin: 0;
+  color: #ff6b35;
 }
 .mz-navbar .user {
   display: flex;
@@ -31,6 +40,30 @@
   text-decoration: none;
   font-weight: 600;
 }
+/* em telas largas, alinhar com o container de 1100px sem estourar filhos */
+@media (min-width: 1200px) {
+  .mz-navbar {
+    padding-left: calc((100vw - 1100px) / 2);
+    padding-right: calc((100vw - 1100px) / 2);
+  }
+}
+
+/* Casca principal */
+.mz-panel {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px 3rem;
+}
+
+/* Alerts (já no tom do site) */
+.mz-panel .alert {
+  background: rgba(59, 165, 93, 0.15);
+  border: 1px solid rgba(59, 165, 93, 0.45);
+  color: #c7f2d7;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  margin: 1rem 0 1.2rem;
+}
 
 /* Cards de stats */
 .mz-panel .stats-grid {
@@ -41,6 +74,10 @@
 }
 .mz-panel .stat-card {
   text-align: center;
+  background: rgba(26, 26, 46, 0.5);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: 12px;
+  padding: 1.1rem;
 }
 .mz-panel .stat-card h3 {
   font-size: 2rem;
@@ -84,6 +121,7 @@
   border: 1px solid rgba(255, 107, 53, 0.2);
   border-radius: 12px;
   background: rgba(26, 26, 46, 0.5);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 .mz-panel .tab-content h2 {
   margin: 0 0 1rem;
@@ -91,7 +129,7 @@
   color: #ff6b35;
 }
 
-/* Ícones de serviços */
+/* Ícones de serviços (YouTube/Twitch/etc.) */
 .mz-panel .servidor {
   display: inline-flex;
   align-items: center;
@@ -153,18 +191,6 @@
   transition: width 0.3s;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .mz-navbar {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .mz-panel .tab-button {
-    flex: 1;
-    text-align: center;
-  }
-}
-
 /* ===== FORM: Gerenciar Canais Monitorados ===== */
 .mz-panel .form {
   display: flex;
@@ -173,7 +199,6 @@
   flex-wrap: wrap;
   margin: 0.8rem 0 1.2rem;
 }
-
 .mz-panel .form select,
 .mz-panel .form input[type="text"] {
   height: 40px;
@@ -185,25 +210,19 @@
   outline: none;
   transition: box-shadow 0.15s ease, border-color 0.15s ease,
     background 0.15s ease;
-  /* evita heranças esquisitas de browsers/tema */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
-
 .mz-panel .form input::placeholder {
   color: #97a0b6;
 }
-
-/* estado de foco */
 .mz-panel .form select:focus,
 .mz-panel .form input[type="text"]:focus {
   border-color: #ff6b35;
   box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.18);
   background: rgba(26, 26, 46, 0.85);
 }
-
-/* botão “Adicionar Canal” */
 .mz-panel .form button[type="submit"] {
   height: 40px;
   padding: 0 1rem;
@@ -220,8 +239,6 @@
 .mz-panel .form button[type="submit"]:active {
   transform: translateY(1px);
 }
-
-/* largura mínima pra não “quebrar” */
 .mz-panel .form select {
   min-width: 170px;
 }
@@ -232,43 +249,14 @@
   min-width: 260px;
 }
 
-/* tabela logo abaixo do form: top margin consistente */
-.mz-panel #canais + table {
-  margin-top: 0.2rem;
-}
-
-/* (Opcional) afina o estilo do dropdown em alguns browsers */
-.mz-panel .form select::-ms-expand {
-  display: none;
-} /* IE/Edge antigo */
-
-/* === Navbar full-bleed (igual ao header do site) === */
-.mz-navbar {
-  /* ocupa a largura da viewport inteira */
-  width: 100vw;
-  /* puxa para fora do container central */
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  /* padding lateral igual ao site (ajuste se quiser) */
-  padding-left: clamp(16px, 4vw, 32px);
-  padding-right: clamp(16px, 4vw, 32px);
-
-  /* mantém o fundo/borda do site */
-  background: rgba(15, 15, 35, 0.9);
-  border-bottom: 2px solid #ff6b35;
-  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
-}
-
-/* opcional: em telas muito largas, limita o conteúdo “interno”
-   para alinhar com o container do painel sem perder o bleed */
-@media (min-width: 1200px) {
+/* Responsivo */
+@media (max-width: 768px) {
   .mz-navbar {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
   }
-  .mz-navbar > * {
-    width: 1100px; /* mesmo max-width do painel */
-    max-width: 90vw; /* segurança */
+  .mz-panel .tab-button {
+    flex: 1;
+    text-align: center;
   }
 }
