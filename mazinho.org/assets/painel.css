@@ -1,23 +1,26 @@
 /* Painel: só ajustes extras em cima do estilo do site */
 
-/* === Navbar full-bleed (igual ao header do site) — estável === */
+/* Casca principal */
+.mz-panel {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px 3rem;
+}
+
+/* Navbar full-bleed (igual ao header do site) */
 .mz-navbar {
-  /* ocupa a largura da viewport inteira e “sai” do container central */
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 
-  /* layout */
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  /* padding vertical e lateral padrão */
   padding: 12px 20px;
   padding-left: clamp(16px, 4vw, 32px);
   padding-right: clamp(16px, 4vw, 32px);
 
-  /* fundo/borda do site */
   background: rgba(15, 15, 35, 0.9);
   border-bottom: 2px solid #ff6b35;
   box-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
@@ -39,4 +42,201 @@
   color: #ff6b35;
   text-decoration: none;
   font-weight: 600;
+}
+@media (min-width: 1200px) {
+  .mz-navbar {
+    padding-left: calc((100vw - 1100px) / 2);
+    padding-right: calc((100vw - 1100px) / 2);
+  }
+}
+
+/* Cards de stats */
+.mz-panel .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.mz-panel .stat-card {
+  text-align: center;
+}
+.mz-panel .stat-card h3 {
+  font-size: 2rem;
+  margin: 0 0 0.3rem;
+  color: #ff6b35;
+}
+.mz-panel .stat-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Tabs */
+.mz-panel .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.mz-panel .tab-button {
+  background: transparent;
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.mz-panel .tab-button:hover {
+  background: rgba(255, 107, 53, 0.1);
+}
+.mz-panel .tab-button.active {
+  background: #ff6b35;
+  color: #111;
+  border-color: #ff6b35;
+}
+
+/* Conteúdo de abas */
+.mz-panel .tab-content {
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: 12px;
+  background: rgba(26, 26, 46, 0.5);
+}
+.mz-panel .tab-content h2 {
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+  color: #ff6b35;
+}
+
+/* Ícones de serviços */
+.mz-panel .servidor {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.mz-panel .servidor img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* Botões de ação */
+.mz-panel button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.mz-panel button.success {
+  background: #3ba55d;
+  color: #fff;
+}
+.mz-panel button.error {
+  background: #ed4245;
+  color: #fff;
+}
+.mz-panel button.warning {
+  background: #faa61a;
+  color: #111;
+}
+
+/* Empty state */
+.mz-panel .empty-state {
+  text-align: center;
+  color: var(--muted);
+  padding: 1.5rem;
+  border: 1px dashed rgba(255, 107, 53, 0.3);
+  border-radius: 10px;
+}
+
+/* Enquetes */
+.mz-panel .barra-enquete {
+  margin-bottom: 0.5rem;
+}
+.mz-panel .barra-enquete span {
+  font-weight: 500;
+}
+.mz-panel .progresso {
+  background: rgba(255, 107, 53, 0.15);
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+}
+.mz-panel .preenchido {
+  background: #ff6b35;
+  height: 100%;
+  transition: width 0.3s;
+}
+
+/* Formulário Gerenciar Canais */
+.mz-panel .form {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 0.8rem 0 1.2rem;
+}
+.mz-panel .form select,
+.mz-panel .form input[type="text"] {
+  height: 40px;
+  padding: 0 0.8rem;
+  border: 1px solid rgba(255, 107, 53, 0.28);
+  background: rgba(26, 26, 46, 0.65);
+  color: #e6e9ef;
+  border-radius: 10px;
+  outline: none;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease,
+    background 0.15s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.mz-panel .form input::placeholder {
+  color: #97a0b6;
+}
+.mz-panel .form select:focus,
+.mz-panel .form input[type="text"]:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.18);
+  background: rgba(26, 26, 46, 0.85);
+}
+.mz-panel .form button[type="submit"] {
+  height: 40px;
+  padding: 0 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  background: #ff6b35;
+  color: #111;
+  border: 1px solid #ff6b35;
+  transition: transform 0.08s ease, filter 0.15s ease;
+}
+.mz-panel .form button[type="submit"]:hover {
+  filter: brightness(1.05);
+}
+.mz-panel .form button[type="submit"]:active {
+  transform: translateY(1px);
+}
+.mz-panel .form select {
+  min-width: 170px;
+}
+.mz-panel .form input[name="nome"] {
+  min-width: 220px;
+}
+.mz-panel .form input[name="identificador"] {
+  min-width: 260px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .mz-navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .mz-panel .tab-button {
+    flex: 1;
+    text-align: center;
+  }
 }
