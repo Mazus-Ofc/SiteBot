@@ -241,3 +241,34 @@
 .mz-panel .form select::-ms-expand {
   display: none;
 } /* IE/Edge antigo */
+
+/* === Navbar full-bleed (igual ao header do site) === */
+.mz-navbar {
+  /* ocupa a largura da viewport inteira */
+  width: 100vw;
+  /* puxa para fora do container central */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  /* padding lateral igual ao site (ajuste se quiser) */
+  padding-left: clamp(16px, 4vw, 32px);
+  padding-right: clamp(16px, 4vw, 32px);
+
+  /* mantém o fundo/borda do site */
+  background: rgba(15, 15, 35, 0.9);
+  border-bottom: 2px solid #ff6b35;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
+}
+
+/* opcional: em telas muito largas, limita o conteúdo “interno”
+   para alinhar com o container do painel sem perder o bleed */
+@media (min-width: 1200px) {
+  .mz-navbar {
+    display: flex;
+    justify-content: center;
+  }
+  .mz-navbar > * {
+    width: 1100px; /* mesmo max-width do painel */
+    max-width: 90vw; /* segurança */
+  }
+}
