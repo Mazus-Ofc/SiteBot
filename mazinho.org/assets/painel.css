@@ -1,205 +1,234 @@
+/* === Variáveis alinhadas ao tema do site === */
 :root {
-  --primary-color: #5865f2;
-  --primary-hover: #4752c4;
-  --success-color: #3ba55d;
-  --danger-color: #ed4245;
-  --warning-color: #faa61a;
-  --background: #36393f;
-  --surface: #2f3136;
-  --surface-hover: #40444b;
-  --text-primary: #ffffff;
-  --text-secondary: #b9bbbe;
-  --text-muted: #72767d;
-  --border: #40444b;
-  --shadow: rgba(0, 0, 0, 0.2);
-  --gradient: linear-gradient(135deg, var(--primary-color), #7289da);
+  --bg: #0f1220;
+  --panel: #171a2a;
+  --border: #2a2f45;
+  --text: #e6e9ef;
+  --muted: #a8b0c3;
+  --brand: #6c8cff;
+
+  /* extras para realces do painel */
+  --brand-2: #5865f2; /* blurple */
+  --success: #3ba55d;
+  --danger: #ed4245;
+  --warn: #faa61a;
 }
 
-/* Painel isolado */
+/* ========= RESET seletivo contra o CSS global do site ========= */
+/* O site estiliza table/th/td/code globalmente; aqui a gente "zera" só no painel.  */
+/* (mantém a identidade do site no resto)  */
+.mz-panel table,
+.mz-panel thead,
+.mz-panel tbody,
+.mz-panel th,
+.mz-panel td,
+.mz-panel code,
+.mz-panel pre,
+.mz-panel button,
+.mz-panel input,
+.mz-panel select {
+  all: revert;
+  box-sizing: border-box;
+  font-family: inherit;
+  color: inherit;
+}
+
+/* ========= Casca do painel ========= */
 .mz-panel {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--background);
-  color: var(--text-primary);
+  font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  color: var(--text);
+  background: var(--bg);
   line-height: 1.6;
   padding-bottom: 3rem;
 }
 
-/* Navbar do painel */
+/* Navbar do painel (respeita paleta do site) */
 .mz-navbar {
-  background: var(--gradient);
-  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--brand), #7289da);
+  padding: 1rem 1.5rem;
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
   align-items: center;
-  box-shadow: 0 2px 10px var(--shadow);
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff14;
   position: sticky;
   top: 0;
-  z-index: 100;
-  border-radius: 0 0 10px 10px;
+  z-index: 10;
+  border-radius: 0 0 12px 12px;
 }
 .mz-navbar h1 {
+  margin: 0;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .mz-navbar .user {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
+  gap: 0.75rem;
+  padding: 0.35rem 0.8rem;
+  background: #ffffff1f;
+  border: 1px solid #ffffff2a;
+  border-radius: 999px;
 }
 .mz-navbar .user a {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 0.3rem 0.7rem;
+  background: #ffffff30;
+  padding: 0.25rem 0.6rem;
   border-radius: 10px;
-  color: white;
-  transition: all 0.3s;
-}
-.mz-navbar .user a:hover {
-  background: rgba(255, 255, 255, 0.35);
+  color: #fff;
+  text-decoration: none;
 }
 
-/* Conteúdo principal */
+/* Conteúdo principal com largura usada pelo site */
 .mz-panel main {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 20px;
 }
 
-/* Alertas */
+/* Alerts */
 .mz-panel .alert {
-  background: var(--success-color);
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
+  background: #1b7a4a;
+  border: 1px solid #2fa36b;
+  color: #dff7ea;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
 }
 
-/* Stats cards */
+/* ======== Stats ======== */
 .mz-panel .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 0.9rem;
+  margin-bottom: 1.6rem;
 }
 .mz-panel .stat-card {
-  background: var(--gradient);
-  color: white;
-  padding: 1.2rem;
-  border-radius: 12px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem;
   text-align: center;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 .mz-panel .stat-card h3 {
-  font-size: 2rem;
-  margin-bottom: 0.3rem;
+  margin: 0 0 0.35rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--brand);
+}
+.mz-panel .stat-card p {
+  margin: 0;
+  color: var(--muted);
 }
 
-/* Tabs */
+/* ======== Tabs ======== */
 .mz-panel .tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 .mz-panel .tab-button {
-  border: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 8px;
+  background: var(--panel);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
   cursor: pointer;
-  background: var(--surface);
-  color: var(--text-secondary);
-  transition: all 0.2s;
-}
-.mz-panel .tab-button.active {
-  background: var(--primary-color);
-  color: white;
 }
 .mz-panel .tab-button:hover {
-  background: var(--surface-hover);
+  background: #1c2033;
+  color: var(--text);
+}
+.mz-panel .tab-button.active {
+  background: var(--brand);
+  color: #111;
+  border-color: transparent;
 }
 
-/* Conteúdo de abas */
+/* Bloco de conteúdo por aba */
 .mz-panel .tab-content {
-  background: var(--surface);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 8px var(--shadow);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin-bottom: 1.6rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 .mz-panel .tab-content h2 {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: var(--text);
   border-bottom: 1px solid var(--border);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.6rem;
 }
 
-/* Formulários */
+/* ======== Formulários ======== */
 .mz-panel .form {
   display: flex;
+  gap: 0.8rem;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 .mz-panel .form select,
 .mz-panel .form input {
-  background: var(--surface-hover);
+  background: #1a1e33;
+  color: var(--text);
   border: 1px solid var(--border);
-  color: var(--text-primary);
-  padding: 0.6rem;
-  border-radius: 6px;
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
   min-width: 160px;
 }
 .mz-panel .form button {
-  background: var(--primary-color);
-  border: none;
-  color: white;
-  padding: 0.7rem 1.3rem;
-  border-radius: 8px;
+  background: var(--brand);
+  color: #111;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.65rem 1.1rem;
   cursor: pointer;
-  transition: background 0.2s;
 }
 .mz-panel .form button:hover {
-  background: var(--primary-hover);
+  filter: brightness(1.05);
 }
 
-/* Tabelas */
+/* ======== Tabelas ======== */
+/* o site estiliza <table> globalmente; aqui padronizamos só no painel */
 .mz-panel table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--background);
-  border-radius: 10px;
+  background: #13162a;
+  border: 1px solid var(--border);
+  border-radius: 12px;
   overflow: hidden;
 }
 .mz-panel thead {
-  background: var(--gradient);
+  background: linear-gradient(180deg, #1a1e33, #171a2a);
 }
 .mz-panel th,
 .mz-panel td {
-  padding: 0.8rem;
-  text-align: left;
+  padding: 12px 14px;
   border-bottom: 1px solid var(--border);
+  text-align: left;
 }
 .mz-panel th {
-  color: white;
-  font-weight: 600;
+  color: var(--muted);
+  font-weight: 700;
 }
-.mz-panel td {
-  color: var(--text-primary);
-}
-.mz-panel tr:hover {
-  background: var(--surface-hover);
+.mz-panel tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
 }
 
-/* Badges de tipo */
+/* ======== Badges tipo ======== */
 .mz-panel .tipo {
-  padding: 0.2rem 0.6rem;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
+  display: inline-block;
+  padding: 0.18rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #fff;
+  border: 1px solid #ffffff22;
 }
 .mz-panel .tipo.youtube {
   background: #ff0000;
@@ -212,37 +241,52 @@
 }
 .mz-panel .tipo.kick {
   background: #53fc18;
-  color: black;
+  color: #111;
 }
 .mz-panel .tipo.trovo {
   background: #1e90ff;
 }
 
-/* Botões */
+/* ======== Coluna "Informações" com ícone pequeno ======== */
+.mz-panel .servidor {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+}
+.mz-panel .servidor img {
+  width: 20px; /* <<< tamanho pequeno (ajuste aqui se quiser 16/24) */
+  height: 20px;
+  object-fit: contain;
+  border-radius: 4px; /* mantém ícones quadrados/brand bonitos */
+  display: inline-block;
+}
+
+/* ======== Botões gerais ======== */
 .mz-panel button {
-  border: none;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.5rem 0.9rem;
   cursor: pointer;
 }
 .mz-panel button.success {
-  background: var(--success-color);
-  color: white;
+  background: var(--success);
+  color: #fff;
 }
 .mz-panel button.error {
-  background: var(--danger-color);
-  color: white;
+  background: var(--danger);
+  color: #fff;
 }
 .mz-panel button.warning {
-  background: var(--warning-color);
-  color: white;
+  background: var(--warn);
+  color: #111;
 }
 
-/* Enquetes */
+/* ======== Enquetes ======== */
 .mz-panel .enquete {
-  background: var(--background);
+  background: #13162a;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -250,44 +294,58 @@
   margin-bottom: 0.5rem;
 }
 .mz-panel .barra-enquete span {
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--muted);
 }
 .mz-panel .progresso {
-  background: var(--border);
+  background: #0f1326;
+  border: 1px solid var(--border);
   height: 8px;
   border-radius: 4px;
   overflow: hidden;
 }
 .mz-panel .preenchido {
-  background: var(--primary-color);
+  background: var(--brand);
   height: 100%;
   transition: width 0.3s;
 }
 
-/* Empty state */
-.mz-panel .empty-state {
-  text-align: center;
-  color: var(--text-muted);
-  padding: 2rem;
+/* ======== Code (evita laranja global) ======== */
+.mz-panel code,
+.mz-panel pre {
+  background: #13162a !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px;
 }
-.mz-panel .empty-state h3 {
-  margin-bottom: 0.3rem;
+.mz-panel code {
+  padding: 2px 6px;
+}
+.mz-panel pre {
+  padding: 12px;
+  overflow: auto;
 }
 
-/* Responsivo */
+/* ======== Empty state ======== */
+.mz-panel .empty-state {
+  text-align: center;
+  color: var(--muted);
+  padding: 1.6rem;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+
+/* ======== Responsivo ======== */
 @media (max-width: 768px) {
   .mz-navbar {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.6rem;
   }
   .mz-panel main {
-    padding: 0 1rem;
-  }
-  .mz-panel table {
-    font-size: 0.85rem;
+    padding: 0 16px;
   }
   .mz-panel th,
   .mz-panel td {
-    padding: 0.5rem;
+    padding: 10px 12px;
   }
 }
