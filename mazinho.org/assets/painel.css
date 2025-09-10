@@ -1,27 +1,7 @@
 /* Painel: só ajustes extras em cima do estilo do site */
 
 /* === Navbar full-bleed (igual ao header do site) — estável === */
-.mz-navbar {
-  /* ocupa a largura da viewport inteira e “sai” do container central */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
 
-  /* layout */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  /* padding vertical e lateral padrão */
-  padding: 12px 20px;
-  padding-left: clamp(16px, 4vw, 32px);
-  padding-right: clamp(16px, 4vw, 32px);
-
-  /* fundo/borda do site */
-  background: rgba(15, 15, 35, 0.9);
-  border-bottom: 2px solid #ff6b35;
-  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
-}
 .mz-navbar h1 {
   font-size: 1.5rem;
   margin: 0;
