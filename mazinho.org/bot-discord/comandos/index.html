@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Comandos • Bot Mazinho</title>
+    <!-- Shared head include -->
+    <!-- Shared head include -->
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+/* --- Comandos "cute" --- */
+.controls {
+  display:flex; gap:12px; align-items:center; margin: 20px 0 30px;
+  flex-wrap: wrap;
+}
+.controls .search {
+  flex:1 1 320px;
+  display:flex; align-items:center; gap:10px;
+  background: rgba(26,26,46,0.6);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius: 14px; padding: 12px 14px;
+}
+.controls input[type="search"]{
+  flex:1; border:none; background:transparent; color:#e6e9f5; outline:none; font-size:1rem;
+}
+.controls .pill {
+  border:1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
+  padding:8px 12px; border-radius:999px; font-size:0.9rem;
+}
+.commands-grid {
+  display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap:16px;
+}
+.command-card {
+  background: linear-gradient(180deg, rgba(28,28,48,0.7), rgba(22,22,40,0.7));
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px; padding:16px; transition: transform .15s ease, box-shadow .15s ease;
+}
+.command-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+.command-head { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.command-head h3 { margin:0; font-size:1.1rem; }
+.slash { opacity:.7; margin-right:2px; }
+.copy-btn {
+  border:1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06);
+  color:#e6e9f5; border-radius:10px; padding:6px 10px; cursor:pointer; font-size:0.9rem;
+}
+.copy-btn:hover { background: rgba(255,255,255,0.1); }
+.desc { margin:8px 0 10px; color:#a8b0c3; min-height: 2.6em; }
+.usage code { padding: 2px 6px; border-radius: 6px; background: rgba(0,0,0,0.25); }
+.options { margin: 8px 0 0 0; padding-left: 18px; }
+.options li { margin: 4px 0; }
+.options .req { color:#ffb3b3; background: rgba(255,0,0,0.12); border:1px solid rgba(255,0,0,0.25); border-radius:8px; padding:2px 6px; margin-left:6px; font-size: 0.85em; }
+.options .opt { color:#b3ffc4; background: rgba(0,255,120,0.08); border:1px solid rgba(0,255,120,0.2); border-radius:8px; padding:2px 6px; margin-left:6px; font-size: 0.85em; }
+.filehint { opacity:.5; margin-top:10px; font-size:0.8rem; }
+.category { margin: 34px 0; }
+.category h2 { font-size:1.3rem; margin-bottom: 14px; }
+.category .count { opacity:.6; font-weight: normal; font-size: 0.95rem; }
+.muted { opacity:.6; }
+</style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1><i class="fas fa-robot"></i> Bot Mazinho</h1>
+
+        <nav>
+          <a href="/">Início</a>
+          <a href="/comandos/">Comandos</a>
+          <a href="/sobre/">Sobre</a>
+          <a href="/palavras-proibidas/">Palavras Proibidas</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <section class="hero small">
+        <h1><i class="fas fa-terminal"></i> Comandos do Bot</h1>
+        <p>Lista gerada automaticamente a partir do repositório. Use a busca para filtrar.</p>
+        <div class="controls">
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="search" id="search" placeholder="Pesquisar por nome ou descrição...">
+          </div>
+          <span class="pill"><i class="fas fa-bolt"></i> Slash Commands</span>
+          <span class="pill"><i class="fas fa-robot"></i> Mazinho Bot</span>
+        </div>
+      </section>
+      
+    <section class="category">
+      <h2>Comunidade &amp; Moderação <span class="count">(6)</span></h2>
+      <div class="commands-grid">
+        
+    <div class="command-card" data-search="analytics 📊 Mostra estatísticas avançadas do servidor">
+        <div class="command-head">
+          <h3><span class="slash">/</span>analytics</h3>
+          <button class="copy-btn" data-cmd="/analytics" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">📊 Mostra estatísticas avançadas do servidor</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/analytics</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/analytics.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="automod 🛡️ Sistema de auto-moderação">
+        <div class="command-head">
+          <h3><span class="slash">/</span>automod</h3>
+          <button class="copy-btn" data-cmd="/automod" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">🛡️ Sistema de auto-moderação</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/automod</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/automod.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="enquete Cria uma enquete e envia para todos os canais configurados">
+        <div class="command-head">
+          <h3><span class="slash">/</span>enquete</h3>
+          <button class="copy-btn" data-cmd="/enquete" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Cria uma enquete e envia para todos os canais configurados</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/enquete [titulo] [opcoes]</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <ul class='options'><li><code>titulo</code> — Título da enquete <span class='opt'>opcional</span></li><li><code>opcoes</code> — Opções separadas por vírgula (ex: Sim, Não) <span class='opt'>opcional</span></li></ul>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/enquete.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="mensagem Envia uma mensagem para todos os canais monitorados">
+        <div class="command-head">
+          <h3><span class="slash">/</span>mensagem</h3>
+          <button class="copy-btn" data-cmd="/mensagem" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Envia uma mensagem para todos os canais monitorados</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/mensagem [conteudo] [tipo] [imagem] [link]</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <ul class='options'><li><code>conteudo</code> — Mensagem a ser enviada (use \\n para quebrar linha) <span class='opt'>opcional</span></li><li><code>tipo</code> — Tipo de mensagem <span class='opt'>opcional</span></li><li><code>imagem</code> — URL da imagem (opcional para embed) <span class='opt'>opcional</span></li><li><code>link</code> — URL para adicionar um botão (opcional para embed) <span class='opt'>opcional</span></li></ul>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/mensagem.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="sugerir Envie uma sugestão para os administradores">
+        <div class="command-head">
+          <h3><span class="slash">/</span>sugerir</h3>
+          <button class="copy-btn" data-cmd="/sugerir" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Envie uma sugestão para os administradores</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/sugerir</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/sugerir.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="xp 🏆 Sistema de XP e níveis">
+        <div class="command-head">
+          <h3><span class="slash">/</span>xp</h3>
+          <button class="copy-btn" data-cmd="/xp" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">🏆 Sistema de XP e níveis</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/xp</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/xp.js</code></div>
+    </div>
+    
+      </div>
+    </section>
+    
+    <section class="category">
+      <h2>Divulgação &amp; Promoções <span class="count">(2)</span></h2>
+      <div class="commands-grid">
+        
+    <div class="command-card" data-search="configurar-canal-divulgacao Define o canal para enviar notificações">
+        <div class="command-head">
+          <h3><span class="slash">/</span>configurar-canal-divulgacao</h3>
+          <button class="copy-btn" data-cmd="/configurar-canal-divulgacao" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Define o canal para enviar notificações</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/configurar-canal-divulgacao [canal]</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <ul class='options'><li><code>canal</code> — Canal de texto <span class='opt'>opcional</span></li></ul>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/configurar-canal-divulgacao.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="configurar-canal-promocao Define o canal para enviar promoções de jogos">
+        <div class="command-head">
+          <h3><span class="slash">/</span>configurar-canal-promocao</h3>
+          <button class="copy-btn" data-cmd="/configurar-canal-promocao" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Define o canal para enviar promoções de jogos</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/configurar-canal-promocao [canal]</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <ul class='options'><li><code>canal</code> — Canal de texto <span class='opt'>opcional</span></li></ul>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/configurar-canal-promocao.js</code></div>
+    </div>
+    
+      </div>
+    </section>
+    
+    <section class="category">
+      <h2>Integrações (Lives/Streams) <span class="count">(7)</span></h2>
+      <div class="commands-grid">
+        
+    <div class="command-card" data-search="adicionar-kick Adiciona um canal Kick para monitoramento.">
+        <div class="command-head">
+          <h3><span class="slash">/</span>adicionar-kick</h3>
+          <button class="copy-btn" data-cmd="/adicionar-kick" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Adiciona um canal Kick para monitoramento.</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/adicionar-kick [usuario] [dono]</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <ul class='options'><li><code>usuario</code> — Nome de usuário da Kick (ex: mazus) <span class='opt'>opcional</span></li><li><code>dono</code> — Dono do canal <span class='opt'>opcional</span></li></ul>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/adicionar-kick.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="adicionar-trovo Adiciona um canal da Trovo para monitoramento.">
+        <div class="command-head">
+          <h3><span class="slash">/</span>adicionar-trovo</h3>
+          <button class="copy-btn" data-cmd="/adicionar-trovo" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Adiciona um canal da Trovo para monitoramento.</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/adicionar-trovo [usuario] [dono]</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <ul class='options'><li><code>usuario</code> — Nome de usuário da Trovo (ex: mazus) <span class='opt'>opcional</span></li><li><code>dono</code> — Dono do canal <span class='opt'>opcional</span></li></ul>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/adicionar-trovo.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="adicionar-twitch Adiciona um streamer da Twitch para monitoramento.">
+        <div class="command-head">
+          <h3><span class="slash">/</span>adicionar-twitch</h3>
+          <button class="copy-btn" data-cmd="/adicionar-twitch" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Adiciona um streamer da Twitch para monitoramento.</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/adicionar-twitch [streamer] [membro]</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <ul class='options'><li><code>streamer</code> — Nome ou link do streamer da Twitch <span class='opt'>opcional</span></li><li><code>membro</code> — Membro do servidor relacionado ao streamer <span class='opt'>opcional</span></li></ul>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/adicionar-twitch.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="adicionar-youtube Adiciona um canal do YouTube para monitoramento (sem API).">
+        <div class="command-head">
+          <h3><span class="slash">/</span>adicionar-youtube</h3>
+          <button class="copy-btn" data-cmd="/adicionar-youtube" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Adiciona um canal do YouTube para monitoramento (sem API).</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/adicionar-youtube [link] [usuario]</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <ul class='options'><li><code>link</code> — Link do canal do YouTube (ex: https://youtube.com/@...) <span class='opt'>opcional</span></li><li><code>usuario</code> — Usuário dono do canal no servidor <span class='opt'>opcional</span></li></ul>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/adicionar-youtube.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="listar-canais Mostra todos os canais monitorados">
+        <div class="command-head">
+          <h3><span class="slash">/</span>listar-canais</h3>
+          <button class="copy-btn" data-cmd="/listar-canais" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Mostra todos os canais monitorados</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/listar-canais</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/listar-canais.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="removercanal Remove um canal de monitoramento imediatamente (somente o dono pode confirmar).">
+        <div class="command-head">
+          <h3><span class="slash">/</span>removercanal</h3>
+          <button class="copy-btn" data-cmd="/removercanal" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Remove um canal de monitoramento imediatamente (somente o dono pode confirmar).</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/removercanal</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/removercanal.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="status 📊 Exibe o status atual das notificações monitoradas">
+        <div class="command-head">
+          <h3><span class="slash">/</span>status</h3>
+          <button class="copy-btn" data-cmd="/status" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">📊 Exibe o status atual das notificações monitoradas</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/status</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/status.js</code></div>
+    </div>
+    
+      </div>
+    </section>
+    
+    <section class="category">
+      <h2>Logs &amp; Auditoria <span class="count">(5)</span></h2>
+      <div class="commands-grid">
+        
+    <div class="command-card" data-search="logclear Apaga todos os logs ou logs de um tipo específico do servidor">
+        <div class="command-head">
+          <h3><span class="slash">/</span>logclear</h3>
+          <button class="copy-btn" data-cmd="/logclear" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Apaga todos os logs ou logs de um tipo específico do servidor</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/logclear</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/logclear.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="logexport Exporta os logs do servidor">
+        <div class="command-head">
+          <h3><span class="slash">/</span>logexport</h3>
+          <button class="copy-btn" data-cmd="/logexport" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Exporta os logs do servidor</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/logexport [formato] [tipo]</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <ul class='options'><li><code>formato</code> — Formato do arquivo exportado <span class='opt'>opcional</span></li><li><code>tipo</code> — Filtrar por tipo de log (ex: message_delete, nickname_change) <span class='opt'>opcional</span></li></ul>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/logexport.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="logremove Remove o canal de logs configurado para este servidor">
+        <div class="command-head">
+          <h3><span class="slash">/</span>logremove</h3>
+          <button class="copy-btn" data-cmd="/logremove" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Remove o canal de logs configurado para este servidor</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/logremove</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/logremove.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="logsetup Define o canal atual como canal de logs do servidor">
+        <div class="command-head">
+          <h3><span class="slash">/</span>logsetup</h3>
+          <button class="copy-btn" data-cmd="/logsetup" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Define o canal atual como canal de logs do servidor</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/logsetup</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/logsetup.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="logstatus Exibe o canal configurado para logs neste servidor">
+        <div class="command-head">
+          <h3><span class="slash">/</span>logstatus</h3>
+          <button class="copy-btn" data-cmd="/logstatus" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Exibe o canal configurado para logs neste servidor</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/logstatus</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/logstatus.js</code></div>
+    </div>
+    
+      </div>
+    </section>
+    
+    <section class="category">
+      <h2>Outros <span class="count">(1)</span></h2>
+      <div class="commands-grid">
+        
+    <div class="command-card" data-search="solicitar-remocao Solicita a remoção de um canal monitorado (envia para aprovação).">
+        <div class="command-head">
+          <h3><span class="slash">/</span>solicitar-remocao</h3>
+          <button class="copy-btn" data-cmd="/solicitar-remocao" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Solicita a remoção de um canal monitorado (envia para aprovação).</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/solicitar-remocao</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/solicitar-remocao.js</code></div>
+    </div>
+    
+      </div>
+    </section>
+    
+    <section class="category">
+      <h2>Utilitários <span class="count">(2)</span></h2>
+      <div class="commands-grid">
+        
+    <div class="command-card" data-search="bot-info Exibe informações dos servidores onde o bot está">
+        <div class="command-head">
+          <h3><span class="slash">/</span>bot-info</h3>
+          <button class="copy-btn" data-cmd="/bot-info" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">Exibe informações dos servidores onde o bot está</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/bot-info</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/bot-info.js</code></div>
+    </div>
+    
+
+    <div class="command-card" data-search="info 📖 Mostra a lista de comandos do bot e o que cada um faz.">
+        <div class="command-head">
+          <h3><span class="slash">/</span>info</h3>
+          <button class="copy-btn" data-cmd="/info" title="Copiar comando">Copiar</button>
+        </div>
+        <p class="desc">📖 Mostra a lista de comandos do bot e o que cada um faz.</p>
+        <div class="usage">
+          <strong>Uso:</strong> <code>/info</code>
+        </div>
+        <details>
+          <summary>Opções</summary>
+          <p class='muted'>Sem opções.</p>
+        </details>
+        <div class="filehint">Arquivo: <code>commands/info.js</code></div>
+    </div>
+    
+      </div>
+    </section>
+    
+    </main>
+    <footer>
+      <div class="container small">
+        <p>© 2025 Mazinho Bot • Identidade visual do Discord integrada</p>
+      </div>
+    </footer>
+    <script>
+      // Simple client-side filtering
+      const input = document.getElementById('search');
+      input?.addEventListener('input', () => {
+        const q = input.value.toLowerCase();
+        document.querySelectorAll('.command-card').forEach(card => {
+          const txt = card.getAttribute('data-search')?.toLowerCase() || '';
+          card.style.display = txt.includes(q) ? '' : 'none';
+        });
+      });
+      // Copy button
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const cmd = btn.getAttribute('data-cmd');
+          try { await navigator.clipboard.writeText(cmd); btn.textContent = 'Copiado!'; setTimeout(() => btn.textContent='Copiar', 1200); }
+          catch (e) { console.log(e); }
+        });
+      });
+    </script>
+  </body>
+</html>
