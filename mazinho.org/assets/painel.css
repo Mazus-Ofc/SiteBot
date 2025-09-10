@@ -48,18 +48,6 @@
   }
 }
 
-/* Casca principal */
-
-/* Alerts (já no tom do site) */
-.mz-panel .alert {
-  background: rgba(59, 165, 93, 0.15);
-  border: 1px solid rgba(59, 165, 93, 0.45);
-  color: #c7f2d7;
-  padding: 0.9rem 1.1rem;
-  border-radius: 12px;
-  margin: 1rem 0 1.2rem;
-}
-
 /* Cards de stats */
 .mz-panel .stats-grid {
   display: grid;
