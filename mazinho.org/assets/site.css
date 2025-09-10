@@ -419,3 +419,188 @@ pre {
     flex-wrap: wrap;
   }
 }
+
+/* ===== Painel: complementos mínimos para usar só site.css + styles.css ===== */
+
+/* Grid de stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.8rem;
+}
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+.stat-card .stat-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.stat-card .stat-label {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Abas */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.tab-button.active {
+  background: var(--brand-orange);
+  color: #111;
+  border-color: transparent;
+}
+
+/* Form inline */
+.form-row {
+  display: grid;
+  grid-template-columns: 170px 1fr 2fr auto;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.form-row input,
+.form-row select {
+  background: #13162a;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 0.65rem 0.8rem;
+  font: inherit;
+  outline: none;
+}
+.form-row input:focus,
+.form-row select:focus {
+  border-color: var(--discord-blurple);
+}
+
+/* Alertas */
+.alert {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  margin: 1rem 0;
+}
+.alert-info {
+  background: rgba(88, 101, 242, 0.12);
+  border-color: rgba(88, 101, 242, 0.35);
+}
+
+/* Estado vazio */
+.empty-state {
+  text-align: center;
+  padding: 1.2rem;
+}
+.empty-state h3 {
+  margin: 0 0 0.25rem;
+}
+.empty-state p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Tabela já usa .table (site.css). Ícones pequenos */
+.icon-16 {
+  width: 16px;
+  height: 16px;
+  vertical-align: -2px;
+  margin-right: 0.35rem;
+  border-radius: 3px;
+}
+
+/* Badges de tipo */
+.badge.tipo.youtube {
+  background: #ff000022;
+  border-color: #ff000055;
+  color: #ffb3b3;
+}
+.badge.tipo.twitch {
+  background: #9146ff22;
+  border-color: #9146ff55;
+  color: #cdb3ff;
+}
+.badge.tipo.discord {
+  background: #5865f222;
+  border-color: #5865f255;
+  color: #c4c9ff;
+}
+.badge.tipo.kick {
+  background: #53fc1822;
+  border-color: #53fc1855;
+  color: #d6ffd0;
+}
+.badge.tipo.trovo {
+  background: #22f39f22;
+  border-color: #22f39f55;
+  color: #c9ffe9;
+}
+.badge.tipo.promocao {
+  background: #ff7a1822;
+  border-color: #ff7a1855;
+  color: #ffdfc6;
+}
+
+/* Badges de status */
+.badge.status.success {
+  background: rgba(56, 142, 60, 0.15);
+  border-color: rgba(56, 142, 60, 0.45);
+  color: #a5d6a7;
+}
+.badge.status.warning {
+  background: rgba(255, 193, 7, 0.16);
+  border-color: rgba(255, 193, 7, 0.5);
+  color: #ffe082;
+}
+.badge.status.error {
+  background: rgba(229, 57, 53, 0.16);
+  border-color: rgba(229, 57, 53, 0.5);
+  color: #ef9a9a;
+}
+
+/* Enquetes */
+.barra-enquete {
+  margin: 0.55rem 0;
+}
+.barra-enquete > span {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+.barra-enquete .progresso {
+  background: #101326;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  height: 12px;
+  overflow: hidden;
+}
+.barra-enquete .preenchido {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(
+    90deg,
+    var(--discord-blurple),
+    var(--brand-orange)
+  );
+  transition: width 0.35s ease;
+}
+
+/* Responsivo */
+@media (max-width: 860px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr 1fr auto;
+  }
+}
+@media (max-width: 560px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .form-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
