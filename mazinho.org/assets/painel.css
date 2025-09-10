@@ -164,3 +164,80 @@
     text-align: center;
   }
 }
+
+/* ===== FORM: Gerenciar Canais Monitorados ===== */
+.mz-panel .form {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 0.8rem 0 1.2rem;
+}
+
+.mz-panel .form select,
+.mz-panel .form input[type="text"] {
+  height: 40px;
+  padding: 0 0.8rem;
+  border: 1px solid rgba(255, 107, 53, 0.28);
+  background: rgba(26, 26, 46, 0.65);
+  color: #e6e9ef;
+  border-radius: 10px;
+  outline: none;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease,
+    background 0.15s ease;
+  /* evita heranças esquisitas de browsers/tema */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.mz-panel .form input::placeholder {
+  color: #97a0b6;
+}
+
+/* estado de foco */
+.mz-panel .form select:focus,
+.mz-panel .form input[type="text"]:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.18);
+  background: rgba(26, 26, 46, 0.85);
+}
+
+/* botão “Adicionar Canal” */
+.mz-panel .form button[type="submit"] {
+  height: 40px;
+  padding: 0 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  background: #ff6b35;
+  color: #111;
+  border: 1px solid #ff6b35;
+  transition: transform 0.08s ease, filter 0.15s ease;
+}
+.mz-panel .form button[type="submit"]:hover {
+  filter: brightness(1.05);
+}
+.mz-panel .form button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+/* largura mínima pra não “quebrar” */
+.mz-panel .form select {
+  min-width: 170px;
+}
+.mz-panel .form input[name="nome"] {
+  min-width: 220px;
+}
+.mz-panel .form input[name="identificador"] {
+  min-width: 260px;
+}
+
+/* tabela logo abaixo do form: top margin consistente */
+.mz-panel #canais + table {
+  margin-top: 0.2rem;
+}
+
+/* (Opcional) afina o estilo do dropdown em alguns browsers */
+.mz-panel .form select::-ms-expand {
+  display: none;
+} /* IE/Edge antigo */
